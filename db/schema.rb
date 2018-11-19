@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2018_11_19_162254) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -26,6 +27,15 @@ ActiveRecord::Schema.define(version: 2018_11_19_162254) do
     t.string "location"
     t.float "latitude"
     t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "location"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
