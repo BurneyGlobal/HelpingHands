@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :resource_assets
+  has_many :resource_assets, dependent: :destroy
 end
