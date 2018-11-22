@@ -139,4 +139,5 @@ task_volunteers << TaskVolunteer.create(user: users[4], task: tasks[0])
 task_volunteers << TaskVolunteer.create(user: users[5], task: tasks[1])
 task_volunteers << TaskVolunteer.create(user: users[5], task: tasks[0])
 
+
 puts "done"
