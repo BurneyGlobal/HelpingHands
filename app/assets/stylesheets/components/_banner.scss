@@ -1,0 +1,26 @@
+.banner {
+  text-align: center;
+  height: calc(100vh - 50px);
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  padding: 0;
+  background-color: black;
+  color: white;
+
+  .banner h1, p {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Quando';
+    color: #111111;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+    text-shadow: 10px 10px 19px -6px rgba(214,219,227,1);
+
+  }
+}
+
+
