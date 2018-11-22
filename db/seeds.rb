@@ -32,6 +32,9 @@ g = User.create  email:"janet@gmail.com", password: "123456", profession: health
 
 # Locations
 location_cph = Location.create name: "Copenhagen", lat: 55.6761, lng: 12.5683
+location_stockholm = Location.create name: "Stockholm", lat: 59.3293, lng: 18.0686
+location_helsinki = Location.create name: "Helsinki", lat: 60.1699, lng: 24.9384
+location_gdansk = Location.create name: "Gdansk", lat: 54.3520, lng: 18.6466
 location_task_1 = Location.create name: "Ordrup", lat: 55.7631, lng: 12.5794
 location_task_2 = Location.create name: "Valby", lat: 55.6617, lng: 12.5168
 location_task_3 = Location.create name: "Ballerup", lat: 55.7265, lng: 12.3578
@@ -42,7 +45,9 @@ location_hospital = Location.create name: "Gentofte Hospital", lat: 55.7392, lng
 
 # Events
 event_cph = Event.create name: "Flood in Copenhagen", location: location_cph
-
+event_stockholm = Event.create name: "Blizzard in Stockholm", location: location_stockholm
+event_helsinki = Event.create name: "Forest fire in Helsinki area", location: location_helsinki
+event_gdansk = Event.create name: "Hail storm in Gdansk", location: location_gdansk
 # User roles
 coordinator = UserRole.create role: "coordinator", event: event_cph, user: b
 volunteer_anna = UserRole.create role: "volunteer", event: event_cph, user: a
