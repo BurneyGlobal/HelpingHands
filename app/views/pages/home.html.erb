@@ -1,9 +1,11 @@
+
 <div class="container blk-background">
   <%= render "shared/banner" %>
   <div class="banner ">
     <h1>Helping Hands</h1>
     <h3>Bringing Order to Disaster</h3>
   </div>
+
   <div
     id="map"
     style="width: 100%;
@@ -12,6 +14,7 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 
+
   <h3>Search for an event by city: </h3>
 
   <p>Pages#home</p>
@@ -19,4 +22,12 @@
 
   <%#= render "shared/search" %>
 </div>
+
+<ul> <h2>Events:</h2></ul>
+  <% @events.each do |event| %>
+    <li><%= link_to event_path(event) do %>
+      <%= event.location.name %> | <%= event.name %>
+    <%end%></li>
+  <%end%>
+</ul>
 
