@@ -1,2 +1,28 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<title>Helping Hands</title>
+
+<style type="text/css">
+   body { background: black !important; color: whitesmoke;}
+   /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+
+
+<div class="container">
+  <div class="banner">
+    <h1>Helping Hands</h1>
+    <h3>Bringing Order to Disaster</h3>
+  </div>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 300px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+  <h3>Search for an event by city: </h3>
+
+  <p>Pages#home</p>
+  <p>Find me in app/views/pages/home.html.erb</p>
+
+</div>
