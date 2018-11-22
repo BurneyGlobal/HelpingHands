@@ -1,5 +1,6 @@
 // Specific CSS for your home-page
-<style type="text/css">
-   body { background: black !important; color: whitesmoke;}
-   /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-</style>
+.blk-background {
+  background: black !important;
+  color: whitesmoke;
+}
+

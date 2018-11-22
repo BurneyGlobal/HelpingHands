@@ -1,19 +1,22 @@
-
-<div class="container">
-  <div class="banner">
+<div class="container blk-background">
+  <%= render "shared/banner" %>
+  <div class="banner ">
     <h1>Helping Hands</h1>
     <h3>Bringing Order to Disaster</h3>
   </div>
-    <div
-      id="map"
-      style="width: 100%;
-      height: 300px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
+  <div
+    id="map"
+    style="width: 100%;
+    height: 300px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
 
-      <h3>Search for an event by city: </h3>
+  <h3>Search for an event by city: </h3>
 
-      <p>Pages#home</p>
-      <p>Find me in app/views/pages/home.html.erb</p>
+  <p>Pages#home</p>
+  <p>Find me in app/views/pages/home.html.erb</p>
+
+  <%#= render "shared/search" %>
 </div>
+
