@@ -1,0 +1,15 @@
+$font-family-modal: 'Montserrat', sans-serif;
+$modal-header-size: 20px;
+$model-content-size: 14px;
+
+
+.modal-content {
+  font-family: $font-family-modal;
+  font-size: 14px;
+  color: black;
+}
+
+.modal-title {
+  font-size: 20px;
+  color: black;
+}
