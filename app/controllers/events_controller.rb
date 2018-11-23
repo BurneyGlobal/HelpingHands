@@ -20,6 +20,13 @@ class EventsController < ApplicationController
     @urgent_tasks = @event.tasks
     # where(urgency: { name: "high" })
     @volunteers = @event.user_roles.where(user_roles: { role: "volunteer" })
+
+    @markers = @tasks.map do |task|
+      {
+        lng: task.location.lng,
+        lat: task.location.lat
+      }
+    end
   end
 
 end

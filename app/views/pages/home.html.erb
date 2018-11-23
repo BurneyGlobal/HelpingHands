@@ -1,36 +1,36 @@
 
-<div class="container blk-background">
+<div class="blk-background">
   <div class="banner-wrapper">
     <%= render "shared/banner" %>
   </div>
+  <div class="home-container">
+    <div class="main-header">
+      <h1>Helping Hands</h1>
+      <h3>Bringing Order to Disaster</h3>
+    </div>
 
-  <div>
-    <h1>Helping Hands</h1>
-    <h3>Bringing Order to Disaster</h3>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 300px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+
+
+
+    <%#= render "shared/search" %>
+
+    <ul class="event-list">
+    <h3>Search for an event by city: </h3>
+      <h2>Events:</h2>
+      <% @events.each do |event| %>
+        <li class="list-inline-item">
+          <%= link_to event_path(event) do %>
+            <%= event.location.name %> | <%= event.name %>
+          <%end%>
+        </li>
+      <%end%>
+    </ul>
   </div>
-
-  <div
-    id="map"
-    style="width: 100%;
-    height: 300px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-
-
-  <h3>Search for an event by city: </h3>
-
-
-  <%#= render "shared/search" %>
-
-  <ul>
-    <h2>Events:</h2>
-    <% @events.each do |event| %>
-      <li>
-        <%= link_to event_path(event) do %>
-          <%= event.location.name %> | <%= event.name %>
-        <%end%>
-      </li>
-    <%end%>
-  </ul>
 </div>
