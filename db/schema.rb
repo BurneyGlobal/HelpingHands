@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_111920) do
+ActiveRecord::Schema.define(version: 2018_11_23_112902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,9 +75,6 @@ ActiveRecord::Schema.define(version: 2018_11_21_111920) do
 
   create_table "tasks", force: :cascade do |t|
     t.text "description"
-    t.string "location"
-    t.float "latitude"
-    t.float "longitude"
     t.string "status", default: "pending"
     t.string "name"
     t.bigint "event_id"
