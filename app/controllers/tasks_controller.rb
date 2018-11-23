@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   before_action :set_event
 
   def index
+
   end
 
   def show
