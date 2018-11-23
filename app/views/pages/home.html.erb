@@ -1,7 +1,10 @@
 
 <div class="container blk-background">
-  <%= render "shared/banner" %>
-  <div class="banner ">
+  <div class="banner-wrapper">
+    <%= render "shared/banner" %>
+  </div>
+
+  <div>
     <h1>Helping Hands</h1>
     <h3>Bringing Order to Disaster</h3>
   </div>
@@ -19,13 +22,15 @@
 
 
   <%#= render "shared/search" %>
+
+  <ul>
+    <h2>Events:</h2>
+    <% @events.each do |event| %>
+      <li>
+        <%= link_to event_path(event) do %>
+          <%= event.location.name %> | <%= event.name %>
+        <%end%>
+      </li>
+    <%end%>
+  </ul>
 </div>
-
-<ul> <h2>Events:</h2></ul>
-  <% @events.each do |event| %>
-    <li><%= link_to event_path(event) do %>
-      <%= event.location.name %> | <%= event.name %>
-    <%end%></li>
-  <%end%>
-</ul>
-
