@@ -1,11 +1,15 @@
 <div class="lists">
   <div class="list-card">
     <div class="list-card-header">TODO</div>
-      <ul>
-        <% @unassigned_tasks.each do |unassigned_task| %>
+    <ul>
+      <% @unassigned_tasks.each do |unassigned_task| %>
         <li><%= unassigned_task.name %></li>
-          <% end %>
-      </ul>
-    <div class="list-card-footer">ADD NEW</div>
+      <% end %>
+    </ul>
+    <div class="list-card-footer">
+      <%= link_to new_event_task_path(@event) do %>
+        <i class="fas fa-plus"></i> add task
+      <% end %>
+    </div>
   </div>
 </div>
