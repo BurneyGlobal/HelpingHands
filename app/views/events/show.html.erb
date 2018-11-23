@@ -1,10 +1,11 @@
-<h3>Unassigned tasks: </h3>
-<ul>
-  <% @unassigned_tasks.each do |unassigned_task| %>
-    <li>
-      <%= unassigned_task.name %>
-    </li>
-  <% end %>
-<ul>
-
-<p> <%= @volunteers.count %> </p>
+<div class="container blk-background">
+  <h3>Unassigned tasks: </h3>
+    <ul>
+      <% @unassigned_tasks.each do |unassigned_task| %>
+        <li>
+          <%= unassigned_task.name %>
+        </li>
+      <% end %>
+    <ul>
+  <p> <%= @volunteers.count %> </p>
+</div>
