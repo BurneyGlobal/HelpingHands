@@ -1,0 +1,11 @@
+<div class="lists">
+  <div class="list-card">
+    <div class="list-card-header">TODO</div>
+      <ul>
+        <% @unassigned_tasks.each do |unassigned_task| %>
+        <li><%= unassigned_task.name %></li>
+          <% end %>
+      </ul>
+    <div class="list-card-footer">ADD NEW</div>
+  </div>
+</div>

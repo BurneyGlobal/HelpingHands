@@ -1,0 +1,93 @@
+/* Some Sass variables */
+// Layout
+$appbar-height: 40px;
+$navbar-height: 50px;
+$list-width: 300px;
+$list-hight: 400px;
+$gap: 10px;
+$scrollbar-thickness: 17px;
+$list-header-height: 36px;
+$list-footer-height: 36px;
+// Misc
+$list-border-radius: 5px;
+$card-border-radius: 3px;
+// Colors
+$board-bg-color: #0079bf;
+$appbar-bg-color: #0067a3;
+$list-bg-color: #e2e4e6;
+
+.lists {
+  display: flex;
+  overflow-x: auto;
+  //width: 100%; // This is needed for FF < 54
+  > * {
+    flex: 0 0 auto; // 'rigid' lists
+    margin-left: $gap;
+  }
+  &::after {
+    content: '';
+    flex: 0 0 $gap;
+  }
+}
+
+.list-card {
+  width: $list-width;
+  height: $list-hight;
+  font-size: 14px;
+  line-height: 1.3em;
+  > * {
+    background-color: $list-bg-color;
+    color: #333;
+    padding: 0 $gap;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+      text-decoration: none;
+      color: #888;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    max-height: calc(100% - #{$list-header-height} - #{$list-footer-height});
+    overflow-y: auto;
+
+    li {
+      background-color: #fff;
+      padding: $gap;
+      &:not(:last-child) {
+        margin-bottom: $gap;
+      }
+
+      border-radius: $card-border-radius;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        opacity: 0.7;
+        text-decoration: none;
+        font-style: bold;
+      }
+    }
+  }
+}
+
+.list-card-header {
+    line-height: $list-header-height;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: $list-border-radius;
+    border-top-right-radius: $list-border-radius;
+  }
+
+.list-card-footer {
+    line-height: $list-footer-height;
+    border-bottom-left-radius: $list-border-radius;
+    border-bottom-right-radius: $list-border-radius;
+    color: #888;
+  }
