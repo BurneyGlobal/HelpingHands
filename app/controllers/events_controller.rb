@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @tasks = @event.tasks
-    @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
+    @unassigned_tasks = @event.tasks.where("tasks.status = 'In progress'")
     @urgent_tasks = @event.tasks
     # where(urgency: { name: "high" })
     @volunteers = @event.user_roles.where(user_roles: { role: "volunteer" })

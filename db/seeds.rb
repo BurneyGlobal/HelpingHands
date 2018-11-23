@@ -78,23 +78,23 @@ urgencies << Urgency.create(name: "high")
 
 # Tasks
 tasks << Task.create(name: "Fix the bridge", description: "Traffic lights fallen down, go fix it",
-          urgency: urgencies[2], location: locations[1], event: events[0], status: "Pending")
+          urgency: urgencies[2], location: locations[1], event: events[0])
 tasks << Task.create(name: "Help a cat in a tree", description: "Cat in a tree",
-          urgency: urgencies[0], location: locations[2], event: events[0], status: "Pending")
+          urgency: urgencies[0], location: locations[2], event: events[0])
 tasks << Task.create(name: "Remove a tree", description: "Remove trees from the street",
-          urgency: urgencies[1], location: locations[3], event: events[0], status: "In progress")
+          urgency: urgencies[1], location: locations[3], event: events[0], status: "in progress")
 tasks << Task.create(name: "Pick up food from the church", description: "Pick up food from the kitchen and take to the emergency shelter",
-          urgency: urgencies[0], location: locations[4], event: events[0], status: "n progress")
+          urgency: urgencies[0], location: locations[4], event: events[0], status: "in progress")
 tasks << Task.create(name: "Fix the roof of a school", description: "The roof is leaking, should be fixed, because of heavy rain",
-          urgency: urgencies[2], location: locations[5], event: events[0], status: "n progress")
+          urgency: urgencies[2], location: locations[5], event: events[0], status: "in progress")
 tasks << Task.create(name: "Car in a ditch", description: "Driver would need help to get the car back to a road",
-          urgency: urgencies[0], location: locations[3], event: events[0], status: "Pending")
+          urgency: urgencies[0], location: locations[3], event: events[0])
 tasks << Task.create(name: "Ten people waiting to get a lift", description: "People looking for a transport to get to the emergency shelter",
-          urgency: urgencies[1], location: locations[2], event: events[0], status: "Done")
+          urgency: urgencies[1], location: locations[2], event: events[0], status: "done")
 tasks << Task.create(name: "Water in a cellar", description: "Somebody would need help to pump water out of the cellar",
-          urgency: urgencies[1], location: locations[4], event: events[0], status: "Done")
+          urgency: urgencies[1], location: locations[4], event: events[0], status: "done")
 tasks << Task.create(name: "Boat leaking", description: "Emergency service boat got hit and is leaking and would have to be transported to a service",
-          urgency: urgencies[2], location: locations[1], event: events[0], status: "Done")
+          urgency: urgencies[2], location: locations[1], event: events[0], status: "done")
 
 # Hubs
 hubs << Hub.create(name: "School / Emergency Shelter", location: locations[5])
