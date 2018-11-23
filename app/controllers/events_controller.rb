@@ -13,6 +13,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @task = Task.new
     @event = Event.find(params[:id])
     @tasks = @event.tasks
     @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
@@ -27,4 +28,5 @@ class EventsController < ApplicationController
       }
     end
   end
+
 end

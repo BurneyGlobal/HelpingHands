@@ -1,0 +1,42 @@
+.dashboard_display_number {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin: 50px;
+
+  border-radius: 190px;
+  border: 3px solid #27ae60;
+  background: #2ecc71;
+  text-align: center;
+
+  text-decoration: none;
+  color: #27ae60;
+
+  transition: all .2s;
+}
+
+.number {
+  line-height: 100px;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  transition: all .1s;
+}
+
+
+
+.effect5 {
+  &:hover {
+    box-shadow: 0px 0 0 11px #FFF,  0px 0 0 10px #27ae60, 0px 0 0 50px #FFF inset;
+  }
+
+  &:active {
+    box-shadow: 0px 0 0 11px #27ae60,  0px 0 0 10px #27ae60, 0px 0 0 50px #FFF inset;
+
+    i {
+      color: #27ae60;
+    }
+  }
+}
+
+
