@@ -1,6 +1,15 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    # @events = Event.all
+
+    @events = Event.all.select(&:location)
+
+    @markers = @events.map do |event|
+      {
+        lng: event.location.lng,
+        lat: event.location.lat
+      }
+    end
   end
 
   def show
