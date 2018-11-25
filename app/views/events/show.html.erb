@@ -16,7 +16,15 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
 
-      <div class="count"> <%= @volunteers.count %> </div>
+
+
+
+<div class="dashboard-number-card">
+  <div class="dashboard-number-card-label"><%= @volunteers.count %>
+    <p>volunteers</p></div>
+</div>
+
+
       <div class="card"> <%= render 'shared/list_card' %> </div>
     </div>
   </div>
