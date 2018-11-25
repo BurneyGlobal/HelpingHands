@@ -1,3 +1,32 @@
-<a href="#" class="effect5">
-        <div class="number"></div>
-      </a>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="dashboard-display-container green">
+        <div class="dashboard-display-icon"><i class="fas fa-users"></i></div>
+        <div class="dashboard-display-header">Volunteers</div>
+        <div class="dashboard-display-number"><%= @volunteers.count %></div>
+      </div>
+
+      <div class="dashboard-display-container blue">
+        <div class="dashboard-display-icon"><i class="fas fa-tasks"></i>/div>
+        <div class="dashboard-display-header">Tasks</div>
+        <div class="dashboard-display-number"><%= @tasks.count %></div>
+      </div>
+
+      <div class="dashboard-display-container red">
+        <div class="dashboard-display-icon"><i class="fas fa-warehouse"></i></div>
+        <div class="dashboard-display-header">Hubs</div>
+        <div class="dashboard-display-number"><%= @hubs.count %></div>
+      </div>
+
+      <div class="dashboard-display-container orange">
+        <div class="dashboard-display-icon"><i class="fas fa-boxes"></i></div>
+        <div class="dashboard-display-header">Assets</div>
+        <div class="dashboard-display-number"><%= @assets.count %></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

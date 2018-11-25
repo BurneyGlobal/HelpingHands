@@ -2,7 +2,6 @@ class TasksController < ApplicationController
   before_action :set_event
 
   def index
-
   end
 
   def show
@@ -15,8 +14,8 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(new_task_params)
     @task.event = @event
+    # @task.location = @location
     # @task_volunteer = @task.user
-    # @location = @task.location
     if @task.save
       redirect_to event_path(@event)
     else
@@ -24,7 +23,13 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
+  end
+
+  def destroy
   end
 
   private
@@ -32,6 +37,10 @@ class TasksController < ApplicationController
   def set_event
     @event = Event.find(params[:event_id])
   end
+
+  # def set_location
+  #   @location = Location.find(params[:location_id])
+  # end
 
   def new_task_params
     params.require(:task).permit(:name, :description, :location_id, :event_id, :urgency_id, :status)
