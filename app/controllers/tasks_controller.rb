@@ -7,19 +7,16 @@ class TasksController < ApplicationController
   def show
   end
 
-  def new
-    @task = Task.new
-  end
-
   def create
     @task = Task.new(new_task_params)
+    location = Location.find_or_create_by(name: params[:location])
+    @task.location = location
     @task.event = @event
-    # @task.location = @location
     # @task_volunteer = @task.user
     if @task.save
       redirect_to event_path(@event)
     else
-      render :new
+      render "events/show"
     end
   end
 
@@ -38,11 +35,7 @@ class TasksController < ApplicationController
     @event = Event.find(params[:event_id])
   end
 
-  # def set_location
-  #   @location = Location.find(params[:location_id])
-  # end
-
   def new_task_params
-    params.require(:task).permit(:name, :description, :location_id, :event_id, :urgency_id, :status)
+    params.require(:task).permit(:name, :description, :event_id, :urgency_id, :status)
   end
 end
