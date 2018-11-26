@@ -7,9 +7,15 @@ $model-content-size: 14px;
   font-family: $font-family-modal;
   font-size: 14px;
   color: black;
+  background-color: $light-gray;
+
 }
 
 .modal-title {
   font-size: 20px;
   color: black;
+}
+.modal-body {
+  justify-content: center;
+
 }
