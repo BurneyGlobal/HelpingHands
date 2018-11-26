@@ -1,0 +1,52 @@
+.dashboard-display-container {
+  display: flex;
+  position: relative;
+  height: 100px;
+  width: 280px;
+  border-radius: 5px;
+  box-shadow:2px 2px 2px rgba(0,0,0,.25);
+}
+
+.dashboard-display-icon {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 50px;
+  color: white;
+  opacity: 0.7;
+}
+
+.dashboard-display-header {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  top: 15px;
+  right: 40px;
+  font-family: 'Raleway', sans-serif;
+  opacity: 0.7;
+}
+
+.dashboard-display-number {
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  right: 40px;
+  bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.green {
+  background-color: $green;
+}
+
+.orange {
+  background-color: $orange;
+}
+
+.blue {
+  background-color: $blue;
+}
+
+.red {
+  background-color: $red;
+}

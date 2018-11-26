@@ -1,9 +1,4 @@
 
-<!-- <div class="container blk-background">
-  <%#= render 'shared/list_card' %>
-</div> -->
-
-<div class="wrap blk-background">
 
     <div class="grid">
 
@@ -16,17 +11,9 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
 
-
-
-
-<div class="dashboard-number-card">
-  <div class="dashboard-number-card-label"><%= @volunteers.count %>
-    <p>volunteers</p></div>
-</div>
-
-
+      <div class="count"> <%= render 'shared/dashboard_display_number' %>  </div>
       <div class="card"> <%= render 'shared/list_card' %> </div>
     </div>
   </div>
-</div>
+
 
