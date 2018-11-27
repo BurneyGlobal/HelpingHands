@@ -1,0 +1,42 @@
+<div class="task-details-container">
+  <div class="task-details-card">
+    <div class="task-details-small-items">
+      <div class="row">
+        <div class="col-sm-6">
+         <p>Status</p>
+          <h6><%= unassigned_task.status %></h6>
+        </div>
+        <div class="col-sm-6">
+         <p>Urgency</p>
+          <h6><%= unassigned_task.urgency.name %></h6>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>Location</p>
+      <h6><%= unassigned_task.location.name %></h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>Description</p>
+      <h6><%= unassigned_task.description %></h6>
+    </div>
+  </div>
+</div>
+  <div class="task-details-buttons">
+    <div class="row">
+      <div class="col-sm-4">
+        <%= render 'shared/task_btn_volunteer' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+    <%= render 'shared/task_btn_status' %>
+    </div>
+  </div>
+  </div>
+</div>
+
+

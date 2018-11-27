@@ -1,0 +1,65 @@
+
+$font-family-modal: 'Montserrat', sans-serif;
+$label-size: 10px;
+$modal-content-size: 14px;
+
+.task-details-container {
+  display: flex;
+  padding: 20px;
+  height: 300px;
+  color: $dark-gray;
+  background-color: $light-gray;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.task-details-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  top: 40px;
+  left: 40px;
+  font-family: $font-family-modal;
+  font-size: $modal-content-size;
+  line-height: 1.6;
+  padding: 0px;
+
+  h6 {
+    margin-bottom: 20px;
+  }
+
+
+  p {
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 0px;
+    font-style: italic;
+  }
+}
+
+
+.content {
+  padding: 10px;
+  font-weight: lighter;
+  font-size: 18px;
+}
+.task-details-small-items {
+  display: flex;
+  margin-left: 0px;
+  flex-direction: row;
+  padding-left: 0px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+
+}
+
+.task-details-buttons {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 10px;
+  margin-right: 0px;
+}
+
