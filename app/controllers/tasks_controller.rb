@@ -14,6 +14,12 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    @volunteers = @event.user_roles.where(user_roles: { role: "volunteer" })
+    @assets = ResourceAsset.all
+    @hubs = Hub.all
+    @tasks = @event.tasks
+
+
 
     @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
 
@@ -24,6 +30,7 @@ class TasksController < ApplicationController
         color: '#33ACEE'
       }
     end
+
   end
 
   def create

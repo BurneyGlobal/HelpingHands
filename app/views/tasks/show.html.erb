@@ -1,1 +1,46 @@
-<%= render "shared/modal_task_details", unassigned_task: @task %>
+
+
+<div class="task-show-container">
+  <div class="task-show-volunteer-list">
+
+   <%= render 'shared/volunteer_list' %>
+
+  </div>
+
+  <div class="task-show-info-map-box">
+
+    <div class="task-show-info-card">
+        <div class="task-show-card-header"><%= @task.name %></div>
+        <div class="task-show-card-body">
+            <div class="row">
+              <div class="col-sm-12">
+                 Status: <%= @task.status %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                Urgency: <%= @task.urgency.name %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                Location: <%= @task.location.name %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                Description: <%= @task.description %>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="task-show-map-card">
+      ...
+      </div>
+    </div>
+
+
+</div>
+

@@ -1,0 +1,123 @@
+$font-family-modal: 'Montserrat', sans-serif;
+$label-size: 10px;
+$card-content-size: 14px;
+
+.task-show-container {
+  display: flex;
+  align-content: space-around;
+  height: 100vh;
+  background-size: cover !important;
+  // background-color: $light-gray;
+  align-items: space-around;
+}
+
+.task-show-volunteer-list {
+  height: 90%;
+  width: 400px;
+  border: 2px solid $gray;
+  border-radius: 3px;
+  background-color: white;
+  margin-left: 120px;
+  margin-right: 100px;
+  margin-top: 50px;
+  // margin-bottom: 50px;
+}
+
+.task-show-info-map-box {
+  align-content: center;
+}
+
+.task-show-info-card {
+  border: 2px solid $gray;
+  border-radius: 3px;
+  background-color: white;
+  height: 40%;
+  width: 500px;
+  margin-left: 70px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  color: $dark-gray;
+  position: relative;
+}
+
+
+
+.task-show-card-header {
+  position: absolute;
+  font-size: 17px;
+  margin-top: 10px;
+  padding-left: 20px;
+  font-weight: bold;
+
+}
+
+.task-show-card-body {
+  position:absolute;
+  font-size: 15px;
+  color: $dark-gray;
+  line-height:2;
+  padding-left: 20px;
+  margin-top: 50px;
+}
+
+.small-content {
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+
+  // flex-direction: column;
+  // top: 40px;
+  // left: 40px;
+  // font-family: $font-family-modal;
+  // font-size: $modal-content-size;
+  // line-height: 1.2;
+  // padding: 0px;
+
+  // justify-content: space-around;
+
+  // h6 {
+  //   margin-bottom: 20px;
+  // }
+
+
+  // p {
+  //   font-weight: bold;
+  //   font-size: 12px;
+  //   padding-bottom: 0px;
+  //   font-style: italic;
+  //   margin-bottom: 10px;
+  // }
+// }
+// .title {
+//   border-bottom: 2px solid $gray;
+//   background-color: $light-gray;
+// }
+
+.task-show-map-card {
+  border: 2px solid $gray;
+  border-radius: 3px;
+  height: 40%;
+  width: 500px;
+  background-color: white;
+  margin-left: 70px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+// .content {
+//   font-size: $card-content-size;
+//   font-family: $font-family-modal;
+// }
+// .task-details-small-items {
+//   display: flex;
+//   margin-left: 0px;
+//   flex-direction: row;
+//   padding-left: 0px;
+//   margin-bottom: 10px;
+//   justify-content: space-between;
+
+
+// }
