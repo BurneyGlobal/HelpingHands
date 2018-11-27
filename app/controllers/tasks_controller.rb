@@ -2,6 +2,14 @@ class TasksController < ApplicationController
   before_action :set_event
 
   def index
+    @tasks = Task.all
+
+    @markers += @tasks.map do |task|
+      {
+        lng: task.location.longitude,
+        lat: task.location.latitude,
+        color: '#33ACEE'
+      }
   end
 
   def show
