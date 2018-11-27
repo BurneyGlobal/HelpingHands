@@ -10,6 +10,7 @@ class TasksController < ApplicationController
         lat: task.location.latitude,
         color: '#33ACEE'
       }
+    end
   end
 
   def show
@@ -18,8 +19,6 @@ class TasksController < ApplicationController
     @assets = ResourceAsset.all
     @hubs = Hub.all
     @tasks = @event.tasks
-
-
 
     @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
 
@@ -30,7 +29,6 @@ class TasksController < ApplicationController
         color: '#33ACEE'
       }
     end
-
   end
 
   def create
