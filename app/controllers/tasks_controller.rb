@@ -2,6 +2,14 @@ class TasksController < ApplicationController
   before_action :set_event
 
   def index
+    @tasks = Task.all
+
+    @markers += @tasks.map do |task|
+      {
+        lng: task.location.longitude,
+        lat: task.location.latitude,
+        color: '#33ACEE'
+      }
   end
 
   def show
@@ -10,6 +18,18 @@ class TasksController < ApplicationController
     @assets = ResourceAsset.all
     @hubs = Hub.all
     @tasks = @event.tasks
+
+
+
+    @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
+
+    @markers += @unassigned_tasks.map do |task|
+      {
+        lng: task.location.longitude,
+        lat: task.location.latitude,
+        color: '#33ACEE'
+      }
+    end
 
   end
 

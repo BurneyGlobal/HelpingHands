@@ -1,18 +1,22 @@
 
 
-<div class="grid">
+<div class="buttons" style="text-align:center;">
+  <%= render 'shared/dashboard_display_number' %>
+</div>
 
+<div class="grid">
 
   <div
   id="map"
-  style="width: 900px;
-  height: 500px;"
+  style="width: 863px;
+  height: 500px; margin-left: 72px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 
   <div class="count"> <%= render 'shared/dashboard_display_number' %>  </div>
   <div class="card"> <%= render 'shared/list_card' %> </div>
+
 
 </div>
 

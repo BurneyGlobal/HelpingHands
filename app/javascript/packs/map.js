@@ -11,7 +11,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
   });
   const markers = JSON.parse(mapElement.dataset.markers);
   markers.forEach((marker) => {
-    new mapboxgl.Marker().setLngLat([marker.lng, marker.lat]).addTo(map);
+    new mapboxgl.Marker({color: marker.color}).setLngLat([marker.lng, marker.lat]).addTo(map);
   })
   if (markers.length === 0) {
     map.setZoom(1);
