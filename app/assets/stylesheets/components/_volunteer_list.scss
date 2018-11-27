@@ -3,7 +3,7 @@
 $appbar-height: 40px;
 $navbar-height: 50px;
 $list-width: 300px;
-$list-hight: 300px;
+$list-hight: 400px;
 $gap: 10px;
 $scrollbar-thickness: 17px;
 $list-header-height: 36px;
@@ -59,6 +59,7 @@ $list-bg-color: #e2e4e6;
     overflow-y: auto;
 
     li {
+      display: flex;
       background-color: #fff;
       padding: $gap;
       &:not(:last-child) {
@@ -77,6 +78,42 @@ $list-bg-color: #e2e4e6;
   }
 }
 
+.avatar-profile {
+  border-radiuś: 50%;
+  font-size: 40px;
+  // border: 2px solid $gray;
+  padding-left: 10px;
+  padding-right: 10px;
+  // background-color: $blue;
+  color: $blue;
+}
+
+.plus {
+  font-size: 25px;
+  padding-top: 10px;
+  color: $gray;
+  margin-right: 10px;
+  &:hover {
+    color: $green;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &.active {
+  color: $green;
+  opacity: 1;
+  }
+}
+
+.flex-body {
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+.flex-text {
+  padding-top: 10px;
+  font-size: 18px;
+}
 .volunteer-list-card-header {
     line-height: $list-header-height;
     font-size: 16px;
