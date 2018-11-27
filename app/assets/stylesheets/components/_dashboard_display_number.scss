@@ -1,4 +1,10 @@
-.dashboard-display-container {
+.container {
+  margin-top: 20px;
+}
+
+.dashboard-display {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
   display: flex;
   position: relative;
   height: 100px;
