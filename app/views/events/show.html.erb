@@ -13,9 +13,6 @@
 
   <div class="count"> <%= render 'shared/dashboard_display_number' %>  </div>
   <div class="card"> <%= render 'shared/list_card' %> </div>
-  <% @volunteers.each do |volunteer| %>
-    <%= volunteer.user.first_name %> <%= volunteer.user.last_name %> |
-  <% end %>
 
 </div>
 

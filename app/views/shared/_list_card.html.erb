@@ -4,22 +4,10 @@
     <ul>
       <% @unassigned_tasks.each do |unassigned_task| %>
         <li>
-          <%= link_to '#', "data-toggle" => "modal", "data-target"=>"#ModalDetails#{unassigned_task.id}" do %>
+          <%= link_to event_task_path(unassigned_task.event_id, unassigned_task) do %>
           <%= unassigned_task.name %>
           <% end %>
         </li>
-          <div class="modal fade" id="ModalDetails<%= unassigned_task.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="ModalDetails<%= unassigned_task.id %>Label"> <%= unassigned_task.name %></h4>
-                </div>
-                <%= render "shared/modal_task_details", unassigned_task: unassigned_task %>
-
-                </div>
-            </div>
-          </div>
       <% end %>
     </ul>
     <div class="list-card-footer">

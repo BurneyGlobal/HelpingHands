@@ -6,6 +6,11 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    @volunteers = @event.user_roles.where(user_roles: { role: "volunteer" })
+    @assets = ResourceAsset.all
+    @hubs = Hub.all
+    @tasks = @event.tasks
+
   end
 
   def create
