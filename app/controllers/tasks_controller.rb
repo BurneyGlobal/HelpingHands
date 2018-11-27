@@ -6,6 +6,16 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+
+    @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
+
+    @markers += @unassigned_tasks.map do |task|
+      {
+        lng: task.location.longitude,
+        lat: task.location.latitude,
+        color: '#33ACEE'
+      }
+    end
   end
 
   def create

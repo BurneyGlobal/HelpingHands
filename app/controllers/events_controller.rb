@@ -14,6 +14,14 @@ class EventsController < ApplicationController
         lat: task.location.latitude
       }
     end
+
+    @markers += @assets.map do |asset|
+      {
+        lng: asset.location.longitude,
+        lat: asset.location.latitude,
+        color: '#E67E21'
+      }
+    end
   end
 end
 

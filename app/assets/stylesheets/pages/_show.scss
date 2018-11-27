@@ -10,23 +10,24 @@
 // }
 
 
+
 .grid {
   display: grid;
   margin-top: 20px;
   margin-left: 0px;
   margin-right: 0px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 25% 25% 25% 25%;
 }
 
 .card {
   grid-row: 1 / span 1;
-  grid-column: 4 / span 1;
+  grid-column: 3 / span 1;
 }
 
 #map {
   grid-row: 1 / span 4;
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
 }
 
 
