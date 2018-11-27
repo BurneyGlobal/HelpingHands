@@ -22,7 +22,7 @@ class TasksController < ApplicationController
 
     @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
 
-    @markers += @unassigned_tasks.map do |task|
+    @markers = @unassigned_tasks.map do |task|
       {
         lng: task.location.longitude,
         lat: task.location.latitude,
