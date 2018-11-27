@@ -10,9 +10,10 @@ class EventsController < ApplicationController
 
     @markers = @tasks.map do |task|
       {
-        lng: task.location.lng,
-        lat: task.location.lat
+        lng: task.location.longitude,
+        lat: task.location.latitude
       }
     end
   end
 end
+
