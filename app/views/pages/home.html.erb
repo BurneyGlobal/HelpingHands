@@ -1,26 +1,161 @@
-
+<!--
 <div class="blk-background">
   <div class="home-container">
     <div class="main-header">
-      <h1>Helping Hands</h1>
+
       <h3>Bringing Order to Disaster</h3>
+      <h3>Choose a city: Find a volunteer opportunity</h3>
+
+    </div>
+  </div> -->
+
+<div class="text-center" style="background-image: url('https://images6.alphacoders.com/481/481285.jpg'); height: 100vh; width: 100%; background-size: cover; background-position:top; background-repeat:no-repeat;">
+  <p class="text-center text-white">Helping Hands</p>
+  <button class="disaster-button">Join a Relief Team</button>
+  <div class="marker1">
+    <img src="https://www.employersresource.com/wp-content/uploads/2016/04/map-marker-icon.png" alt="" style="height: 40px;">
+    <div class="pulse" data-status="running">
     </div>
   </div>
+  <div class="marker2">
+    <img src="https://www.employersresource.com/wp-content/uploads/2016/04/map-marker-icon.png" alt="" style="height: 45px;">
+    <div class="pulse" data-status="running">
+    </div>
+  </div>
+  <div class="marker3">
+    <img src="https://www.employersresource.com/wp-content/uploads/2016/04/map-marker-icon.png" alt="" style="height: 40px;">
+    <div class="pulse" data-status="running">
+    </div>
+  </div>
+  <div class="marker4">
+    <img src="https://www.employersresource.com/wp-content/uploads/2016/04/map-marker-icon.png" alt="" style="height: 35px;">
+    <div class="pulse" data-status="running">
+    </div>
+  </div>
+</div>
 
 
-    <div
+<div class="text-center" style="position: relative;">
+  <img src="https://images.unsplash.com/photo-1542187251986-301fc9fd4af2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=470082939907e648cc63bc40e413b611&auto=format&fit=crop&w=1050&q=80" alt="" style="width: 100%; height: 50vh; object-fit: cover; margin-top: 30px; border-top-left-radius: 100px;border-top-right-radius: 100px; border-bottom: 6px solid rgba(188, 13, 13,1);">
+  <div class="helping-list">
+    <div class="helping-element">
+      <i class="fas fa-hands-helping"></i>
+      <p>People</p>
+    </div>
+    <div class="helping-element">
+      <i class="fas fa-hands-helping"></i>
+      <p>Places</p>
+    </div>
+    <div class="helping-element">
+      <i class="fas fa-hands-helping"></i>
+      <p>Things</p>
+    </div>
+  </div>
+</div>
+
+<p>Disasters that need your help:</p>
+<div class="container">
+  <div class="parent">
+      <div class="child">
+        <article class="card">
+          <div class="thumb" style="background: url(<%= image_path 'aarhus_storm.jpeg' %>);"></div>
+          <div class="infos">
+            <h2 class="title">Aarhus<span class="flag" style="background: url(<%= image_path 'dk_flag.png' %>);"></span></h2>
+            <h3 class="date">Hurricane</h3>
+            <h3 class="seats">volunteers needed: 4</h3>
+            <p class="txt">
+              After major flooding, the local Danes need help...
+            </p>
+            <h3 class="details">event details</h3>
+          </div>
+        </article>
+    </div>
+      <div class="child">
+        <article class="card">
+          <div class="thumb" style="background: url(<%= image_path 'taxi_cphflood.jpg' %>);"></div>
+          <div class="infos">
+            <h2 class="title">Copenhagen<span class="flag" style="background: url(<%= image_path 'dk_flag.png' %>);"></span></h2>
+            <h3 class="date">Major Flood</h3>
+            <h3 class="seats">volunteers needed: 4</h3>
+            <p class="txt">
+              After major flooding, the local Danes need help...
+            </p>
+            <h3 class="details">event details</h3>
+          </div>
+        </article>
+    </div>
+      <div class="child">
+        <article class="card">
+          <div class="thumb" style="background: url(<%= image_path 'gdansk_snow.jpeg' %>);"></div>
+          <div class="infos">
+            <h2 class="title">Gdansk<span class="flag" style="background: url(<%= image_path 'pl_flag.png' %>);"></span></h2>
+            <h3 class="date">Hail Storm</h3>
+            <h3 class="seats">volunteers needed: 4</h3>
+            <p class="txt">
+              After major flooding, the local Danes need help...
+            </p>
+            <h3 class="details">event details</h3>
+          </div>
+        </article>
+    </div>
+  </div>
+  <div class="parent">
+      <div class="child">
+        <article class="card">
+          <div class="thumb" style="background: url(<%= image_path 'finland_fire.jpeg' %>);"></div>
+          <div class="infos">
+            <h2 class="title">Helsinki<span class="flag" style="background: url(<%= image_path 'fi_flag.png' %>);"></span></h2>
+            <h3 class="date">Forest Fire</h3>
+            <h3 class="seats">volunteers needed: 4</h3>
+            <p class="txt">
+              After major flooding, the local Danes need help...
+            </p>
+            <h3 class="details">event details</h3>
+          </div>
+        </article>
+    </div>
+      <div class="child">
+        <article class="card">
+          <div class="thumb" style="background: url(<%= image_path 'tornado_sv.jpg' %>);"></div>
+          <div class="infos">
+            <h2 class="title">Malmo<span class="flag" style="background: url(<%= image_path 'sv_flag.png' %>);"></span></h2>
+            <h3 class="date">Tornado</h3>
+            <h3 class="seats">volunteers needed: 4</h3>
+            <p class="txt">
+              After major flooding, the local Danes need help...
+            </p>
+            <h3 class="details">event details</h3>
+          </div>
+        </article>
+    </div>
+      <div class="child">
+        <article class="card">
+          <div class="thumb" style="background: url(<%= image_path 'stockholm_blizzard.jpg' %>);"></div>
+          <div class="infos">
+            <h2 class="title">Stockholm<span class="flag" style="background: url(<%= image_path 'sv_flag.png' %>);"></span></h2>
+            <h3 class="date">Blizzard</h3>
+            <h3 class="seats">volunteers needed: 4</h3>
+            <p class="txt">
+              After major flooding, the local Danes need help...
+            </p>
+            <h3 class="details">event details</h3>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+
+<!--     <div
       id="map"
       style="width: 100%;
       height: 300px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     ></div>
-
-
-
-
+ -->
     <ul class="event-list">
-    <h3>Search for an event by city: </h3>
+    <!-- <h3>Search for an event by city: </h3> -->
       <h2>Events:</h2>
       <% @events.each do |event| %>
         <li class="list-inline-item">
