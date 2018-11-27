@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     @markers = @events.map do |event|
       {
         lng: event.location.lng,
-        lat: event.location.lat
+        lat: event.location.lat,
       }
     end
   end
