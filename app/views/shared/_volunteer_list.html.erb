@@ -4,7 +4,15 @@
       <ul>
         <% @volunteers.each do |volunteer| %>
           <li class="list-inline flex-body">
-            <div class="avatar-profile"><i class="fas fa-user-md"></i></div> <div class="flex-text">  <%= volunteer.user.first_name %> <%= volunteer.user.last_name %> </div> <div> <i class="fas fa-plus-circle plus"></i></div>
+            <div class="avatar-profile"><i class="<%= volunteer.icon %>"></i></div>
+            <div class="flex-text"><%= volunteer.user.first_name %> <%= volunteer.user.last_name %></div>
+            <% if @task.has_volunteer?(volunteer.user) %>
+              <div><i class="fas fa-check-circle assign"></i></div>
+            <% else %>
+              <%= link_to assign_task_path(@task,volunteer.user), method: :post, remote: true, id: "user-#{volunteer.user.id}" do %>
+                <div> <i class="fas fa-plus-circle plus"></i></div>
+              <% end %>
+            <% end %>
           </li>
         <% end %>
       </ul>
@@ -16,14 +24,3 @@
   </div>
 </div>
 
-<!--
-when volunteer.user.profession = healthcare
- <i class="fas fa-user-md"> $blue
-
-when volunteer.user.profession = administration
-<i class="fas fa-pen"></i> $green
-when volunteer.user.profession = construction
-<i class="fas fa-wrench"></i> $special-yellow
-when volunteer.user.profession = general help
-
-<i class="fas fa-hands-helping"></i> -->

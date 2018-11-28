@@ -41,7 +41,15 @@ users << User.create!(email:"henri@gmail.com", password: "123456", profession: p
 users << User.create!(email:"peter@gmail.com", password: "123456", profession: professions[1], first_name: "Peter", last_name: "Smith", phone: "12345678")
 users << User.create!(email:"susan@gmail.com", password: "123456", profession: professions[3], first_name: "Susan", last_name: "Hanson", phone: "12345678")
 users << User.create!(email:"georg@gmail.com", password: "123456", profession: professions[3], first_name: "Georg", last_name: "Jonsen", phone: "12345678")
-users << User.create!(email:"janet@gmail.com", password: "123456", profession: professions[0], first_name: "Janet", last_name: "Petersson", phone: "12345678")
+users << User.create!(email:"janet@gmail.com", password: "123456", profession: professions[0], first_name: "Janet", last_name: "Peterson", phone: "12345678")
+users << User.create!(email:"mark@gmail.com", password: "123456", profession: professions[2], first_name: "Mark", last_name: "Smith", phone: "12345678")
+users << User.create!(email:"janina@gmail.com", password: "123456", profession: professions[1], first_name: "Janina", last_name: "Hansen", phone: "12345678")
+users << User.create!(email:"flaming@gmail.com", password: "123456", profession: professions[3], first_name: "Fleming", last_name: "Carter", phone: "12345678")
+users << User.create!(email:"anette@gmail.com", password: "123456", profession: professions[1], first_name: "Anette", last_name: "Mehlig", phone: "12345678")
+users << User.create!(email:"marko@gmail.com", password: "123456", profession: professions[2], first_name: "Marko", last_name: "Meyer", phone: "12345678")
+users << User.create!(email:"john@gmail.com", password: "123456", profession: professions[0], first_name: "John", last_name: "Stenberg", phone: "12345678")
+users << User.create!(email:"morten@gmail.com", password: "123456", profession: professions[2], first_name: "Morten", last_name: "Suhr", phone: "12345678")
+users << User.create!(email:"ivone@gmail.com", password: "123456", profession: professions[0], first_name: "Ivone", last_name: "Feer", phone: "12345678")
 
 # Locations
 locations << Location.create!(name: "Copenhagen", latitude: 55.6761, longitude: 12.5683)
@@ -70,7 +78,14 @@ user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[
 user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[5])
 user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[6])
 user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[2])
-
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[7])
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[8])
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[9])
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[10])
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[11])
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[12])
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[13])
+user_roles << UserRole.create!(role: "volunteer", event: events[0], user: users[14])
 # Urgencies
 urgencies << Urgency.create!(name: "low")
 urgencies << Urgency.create!(name: "medium")
