@@ -122,7 +122,11 @@
             <p class="txt">
               After major flooding, the local Danes need help...
             </p>
-            <h3 class="details">event details</h3>
+            <%= @events.each do |event| %>
+              <%= link_to event_path(event) do  %>
+                <h3 class="details">event details</h3>
+              <% end %>
+            <% end %>
           </div>
         </article>
     </div>
