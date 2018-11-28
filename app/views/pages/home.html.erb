@@ -47,6 +47,7 @@
   });
 </script>
 
+
 <div class="first-about">
   <div class="about-image">
     <%= image_tag "https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3cc7089a74adc81a8c1198e3286654ea&auto=format&fit=crop&w=800&q=60" %>
@@ -108,26 +109,26 @@
             <p class="txt">
               After major flooding, the local Danes need help...
             </p>
-            <h3 class="details">event details</h3>
+            <h3 class="details">Join This Team</h3>
           </div>
         </article>
     </div>
       <div class="child">
         <article class="card">
           <div class="thumb" style="background: url(<%= image_path 'taxi_cphflood.jpg' %>);"></div>
-          <div class="infos">
-            <h2 class="title">Copenhagen<span class="flag" style="background: url(<%= image_path 'dk_flag.png' %>);"></span></h2>
-            <h3 class="date">Major Flood</h3>
-            <h3 class="seats">volunteers needed: 4</h3>
-            <p class="txt">
-              After major flooding, the local Danes need help...
-            </p>
-            <%= @events.each do |event| %>
-              <%= link_to event_path(event) do  %>
-                <h3 class="details">event details</h3>
-              <% end %>
-            <% end %>
-          </div>
+
+          <%= link_to event_path(Event.find_by(name: "Flood in Copenhagen")) do  %>
+            <div class="infos">
+              <h2 class="title">Copenhagen<span class="flag" style="background: url(<%= image_path 'dk_flag.png' %>);"></span></h2>
+              <h3 class="date">Major Flood</h3>
+              <h3 class="seats">volunteers needed: 4</h3>
+              <p class="txt">
+                After major flooding, the local Danes need help...
+              </p>
+              <h3 class="details" a href="/events/22">Join This Team</h3>
+            </div>
+          <% end %>
+
         </article>
     </div>
       <div class="child">
@@ -140,7 +141,7 @@
             <p class="txt">
               After major flooding, the local Danes need help...
             </p>
-            <h3 class="details">event details</h3>
+            <h3 class="details">Join This Team</h3>
           </div>
         </article>
     </div>
@@ -156,7 +157,7 @@
             <p class="txt">
               After major flooding, the local Danes need help...
             </p>
-            <h3 class="details">event details</h3>
+            <h3 class="details">Join This Team</h3>
           </div>
         </article>
     </div>
@@ -170,13 +171,14 @@
             <p class="txt">
               After major flooding, the local Danes need help...
             </p>
-            <h3 class="details">event details</h3>
+            <h3 class="details">Join This Team</h3>
           </div>
         </article>
     </div>
       <div class="child">
         <article class="card">
           <div class="thumb" style="background: url(<%= image_path 'stockholm_blizzard.jpg' %>);"></div>
+
           <div class="infos">
             <h2 class="title">Stockholm<span class="flag" style="background: url(<%= image_path 'sv_flag.png' %>);"></span></h2>
             <h3 class="date">Blizzard</h3>
@@ -184,12 +186,13 @@
             <p class="txt">
               After major flooding, the local Danes need help...
             </p>
-            <h3 class="details">event details</h3>
+            <h3 class="details">Join This Team</h3>
           </div>
         </article>
     </div>
   </div>
 </div>
+
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-instagram"></i></a>

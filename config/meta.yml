@@ -1,0 +1,5 @@
+meta_product_name: "Helping Hands"
+meta_title: "Helping Hands - Organize your help"
+meta_description: "An app to manage tasks, resources, and volunteers"
+meta_image: "https://imgur.com/a/A4dWZue"                       # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
