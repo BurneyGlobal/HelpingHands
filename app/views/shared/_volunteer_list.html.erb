@@ -3,8 +3,8 @@
     <div class="volunteer-list-card-header">Volunteers</div>
       <ul>
         <% @volunteers.each do |volunteer| %>
-          <li>
-            <%= volunteer.user.first_name %> <%= volunteer.user.last_name %> <i class="fas fa-plus-circle"></i>
+          <li class="list-inline flex-body">
+            <div class="avatar-profile"><i class="fas fa-user-md"></i></div> <div class="flex-text">  <%= volunteer.user.first_name %> <%= volunteer.user.last_name %> </div> <div> <i class="fas fa-plus-circle plus"></i></div>
           </li>
         <% end %>
       </ul>
@@ -16,4 +16,14 @@
   </div>
 </div>
 
+<!--
+when volunteer.user.profession = healthcare
+ <i class="fas fa-user-md"> $blue
 
+when volunteer.user.profession = administration
+<i class="fas fa-pen"></i> $green
+when volunteer.user.profession = construction
+<i class="fas fa-wrench"></i> $special-yellow
+when volunteer.user.profession = general help
+
+<i class="fas fa-hands-helping"></i> -->

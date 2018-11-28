@@ -1,66 +1,26 @@
-<div class="filler one"></div>
-<div>
+<nav class="top-navb">
+  <%= link_to root_path do  %>
+    <div class="logo">
+      <%= image_tag "https://i.imgur.com/ueQ0I8Y.png", id: "logo"  %>
+    </div>
+  <% end %>
+  <div class="main_list">
+    <a href="#">Dashboard</a>
+  </div>
+</nav>
 
-  <nav id="navbar">
-      <%= image_tag "handshake_icon.png", id: "logo"  %>
-    <ul>
-      <li></li>
-      <li></li>
-      <li><a href="#">Dashboard</a></li>
-    </ul>
-  </nav>
-</div>
-<!-- <div class="filler two"></div> -->
-
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
 
 
-
-<!--
-<!-- https://codepen.io/albizan/pen/mMWdWZ -->
-<!-- reponsive navbar from codepen -->
-
-
-
-
-<!-- <nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="#">Helping Hands</a>
-            </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-        </div>
-    </nav>
-
-    <section class="home">
-    </section> -->
-
-
-<!-- Jquery needed -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-    <!-- <script src="js/scripts.js"></script> -->
-
-<!-- Function used to shrink nav bar removing paddings and adding black background -->
-    <!-- <script>
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
-        });
-    </script> -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.top-navb').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.top-navb').removeClass('affix');
+        }
+    });
+</script>
 

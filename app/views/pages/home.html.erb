@@ -9,8 +9,10 @@
     </div>
   </div> -->
 
-<div class="text-center" style="background-image: url('https://images6.alphacoders.com/481/481285.jpg'); height: 100vh; width: 100%; background-size: cover; background-position:top; background-repeat:no-repeat;">
-  <p class="text-center text-white">Helping Hands</p>
+<div class="banner-wrapper">
+  <div class="text-center" style="background-image: url('http://www.pngall.com/wp-content/uploads/1/World-Map-PNG-Image-File.png'); height: 100vh; width: 100%; background-size: cover; background-position:sticky; background-repeat:no-repeat;" >
+  <p class="text-center text-white">HELPING HANDS</p>
+  <p class="text-center little-white-text" style="color: rgba(10,10,10,1); font-size: 16px;background-color: white; padding: 6px 20px; font-weight: lighter; margin:0 auto; width: 20%; margin-top: -20px; margin-bottom: 20px;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);">More hands. More help.</p>
   <button class="disaster-button">Join a Relief Team</button>
   <div class="marker1">
     <img src="https://www.employersresource.com/wp-content/uploads/2016/04/map-marker-icon.png" alt="" style="height: 40px;">
@@ -33,31 +35,69 @@
     </div>
   </div>
 </div>
-
-<!--
-<div class="text-center" style="position: relative;">
-  <img src="https://images.unsplash.com/photo-1542187251986-301fc9fd4af2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=470082939907e648cc63bc40e413b611&auto=format&fit=crop&w=1050&q=80" alt="" style="width: 100%; height: 50vh; object-fit: cover; margin-top: 30px; border-top-left-radius: 100px;border-top-right-radius: 100px; border-bottom: 6px solid rgba(188, 13, 13,1);"> -->
-<!--   <div class="helping-list">
-    <div class="helping-element">
-      <i class="fas fa-hands-helping"></i>
-      <p>People</p>
-    </div>
-    <div class="helping-element">
-      <i class="fas fa-hands-helping"></i>
-      <p>Places</p>
-    </div>
-    <div class="helping-element">
-      <i class="fas fa-hands-helping"></i>
-      <p>Resources</p>
-    </div>
-  </div>
-</div> -->
-
-<div id="light_wrap">
-<p>Disasters that need your help:</p>
 </div>
 
-<div class="container" id="dark_wrap">
+<script>
+  $(document).ready(function (){
+      $(".disaster-button").click(function (){
+          $('html, body').animate({
+              scrollTop: $(".learn-more-button").offset().top
+          }, 500);
+      });
+  });
+</script>
+
+
+<div class="first-about">
+  <div class="about-image">
+    <%= image_tag "https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3cc7089a74adc81a8c1198e3286654ea&auto=format&fit=crop&w=800&q=60" %>
+  </div>
+  <div class="about-text text-center">
+    <div class="one">Teamwork.</div>
+    <div class="two">Volunteers.</div>
+    <div class="three">Helping hand<span>.</span></div>
+  </div>
+</div>
+
+<div class="second-about">
+  <div class="about-text text-center">
+    <div class="one">Resources.</div>
+    <div class="two">Coordinators.</div>
+    <div class="three">Support<span>.</span></div>
+  </div>
+  <div class="about-image">
+    <%= image_tag "https://images.unsplash.com/photo-1493064452371-27cc07818a0f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07dfc1dfb8f8cd035756f39ab9334c40&auto=format&fit=crop&w=800&q=60" %>
+  </div>
+</div>
+
+<div class="text-center" style="position: relative;">
+  <img src="https://images.unsplash.com/photo-1542187251986-301fc9fd4af2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=470082939907e648cc63bc40e413b611&auto=format&fit=crop&w=1050&q=80" alt="" style="width: 100%; height: 60vh; object-fit: cover;">
+
+    <div class="helping-list text-center">
+      <div class="text">
+        <div class="helping-element">
+          <p class="header">Safety.</p>
+          <p>Trust and safety is a must have when helping people in need. Join the team as a volunteer and start helping others today.</p>
+        </div>
+        <div class="helping-element">
+          <p class="header">Simplicity.</p>
+          <p>The app is easy and simple to use. Just join as a volunteer and a coordinater will do the rest for you</p>
+        </div>
+        <div class="helping-element">
+          <p class="header">Scalability.</p>
+          <p>Helping hands works for both smaller issues and large disaster events. Everything is secured and controlled </p>
+        </div>
+      </div>
+      <div class="learn-more-button">
+        Learn more
+      </div>
+    </div>
+
+</div>
+
+<p class="disaster-event-header text-center"><span>Urgent</span> disaster events near you:</p>
+<hr>
+<div class="container">
   <div class="parent">
       <div class="child">
         <article class="card">
@@ -76,6 +116,7 @@
       <div class="child">
         <article class="card">
           <div class="thumb" style="background: url(<%= image_path 'taxi_cphflood.jpg' %>);"></div>
+
           <%= link_to event_path(Event.find_by(name: "Flood in Copenhagen")) do  %>
             <div class="infos">
               <h2 class="title">Copenhagen<span class="flag" style="background: url(<%= image_path 'dk_flag.png' %>);"></span></h2>
@@ -87,6 +128,7 @@
               <h3 class="details" a href="/events/22">Join This Team</h3>
             </div>
           <% end %>
+
         </article>
     </div>
       <div class="child">
@@ -151,44 +193,6 @@
   </div>
 </div>
 
-<!-- <div id="dark_wrap">
-  <div class="sp-container">
-    <div class="sp-content">
-      <div class="sp-globe"></div>
-      <h2 class="frame-1">When Disaster Strikes</h2>
-      <h2 class="frame-2">You Are Not Alone</h2>
-      <h2 class="frame-3">Keep Calm</h2>
-      <h2 class="frame-4">Get Organized</h2>
-      <h2 class="frame-5">
-        <span>We are</span>
-        <span>Helping</span>
-        <span>Hands</span>
-      </h2>
-     <a class="sp-circle-link" href="https://nick.mkrtchyan.ga">by Nick</a> -->
-    </div>
-  </div>
-</div>
-<!--     <div
-      id="map"
-      style="width: 100%;
-      height: 300px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
- -->
-    <!-- <ul class="event-list"> -->
-    <!-- <h3>Search for an event by city: </h3> -->
-      <!-- <h2>Events:</h2> -->
-      <!-- <% @events.each do |event| %> -->
-        <!-- <li class="list-inline-item"> -->
-          <!-- <%= link_to event_path(event) do %> -->
-            <!-- <%= event.location.name %> | <%= event.name %> -->
-          <!-- <%end%> -->
-        <!-- </li> -->
-      <!-- <%end%> -->
-    <!-- </ul> -->
-  </div>
-</div>
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -200,3 +204,4 @@
     Organize your help <i class="fas fa-hand-holding-heart"></i> with Helping Hands
   </div>
 </div>
+

@@ -10,6 +10,7 @@ class TasksController < ApplicationController
         lat: task.location.latitude,
         color: '#33ACEE'
       }
+    end
   end
 
   def show
@@ -19,18 +20,15 @@ class TasksController < ApplicationController
     @hubs = Hub.all
     @tasks = @event.tasks
 
-
-
     @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
 
-    @markers += @unassigned_tasks.map do |task|
+    @markers = @unassigned_tasks.map do |task|
       {
         lng: task.location.longitude,
         lat: task.location.latitude,
         color: '#33ACEE'
       }
     end
-
   end
 
   def create
