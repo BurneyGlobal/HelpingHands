@@ -1,72 +1,49 @@
-$nav-height: 3em;
-// $nav-color: red;
-// $nav-background: #111111;
-
-
-
-
-
 #logo {
-  height: 50px;
-  vertical-align: middle;
+  margin-top: -4px;
+  height: 70px;
+  margin-left: 10px;
 }
 
-nav {
+nav.top-navb {
+  border-top: 4px solid rgba(255,255,255,0);
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 70px;
   width: 100%;
-  color: red;
-  background: #111111;
-
+  background-color: rgba(255,255,255,1);
+  z-index: 100000;
   font-weight: bold;
   letter-spacing: 0.025em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-  text-align: center;
-  text-align: right;
-  margin: 0;
-  font-size: 20px;
-  height: 60px;
-}
-
-nav ul li {
-
-  color: red;
-  text-align: justify;
-  display: inline-block;
-  padding: 0 3em;
-  line-height: 3em;
-}
-
-nav ul li a {
-  font-family: $headers-font;
-  color: #F4F4F4;
-}
-
-
-nav ul li a:hover {
+nav .main_list a {
+  font-weight: lighter;
+  margin-right: 30px;
+  padding-bottom: 4px;
+  transition: 0.2s ease;
+  font-size: 16px;
   text-decoration: none;
+  color: grey;
+}
+
+
+nav .main_list a:hover {
   color: #C54D49;
   // background: #00939C;
 }
 
-
-/*----------------------
-  $BODY
-  ----------------------*/
-
-body {
-  background: #0B6AD4;
+nav.top-navb.affix {
+  border-top: 4px solid #C54D49;
+  background: white;
+  a {
+    color: grey;
+  }
+  a:hover {
+    color: #C54D49;
+  }
 }
 
-/*----------------------
-  $MISC
-  ----------------------*/
-
-.filler {
-  width: 1px;
-  // height: 200px;
-}
-
-.two {
-  height: 3000px;
-}
