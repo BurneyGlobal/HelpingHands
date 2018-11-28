@@ -1,0 +1,12 @@
+// Select the right element
+// change the html content of that element
+function changeButtonContent() {
+  const button = document.getElementById("user-<%= @user.id %>");
+  button.innerHTML = '<div><i class="fas fa-check-circle assign"></i></div>';
+  if ('<%= @task.status %>' === "in progress") {
+    const statusElement = document.getElementById("task-status");
+    statusElement.innerHTML = "Status: <%= @task.status %>";
+  }
+}
+
+changeButtonContent();
