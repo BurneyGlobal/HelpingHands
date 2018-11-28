@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    { host: ENV["HOST"] || "www.helpinghands.fun" }
+    { host: ENV["HOST"] || "localhost:3000" }
   end
 end
