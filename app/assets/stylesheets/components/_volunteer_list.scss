@@ -3,10 +3,10 @@
 $appbar-height: 40px;
 $navbar-height: 50px;
 $list-width: 300px;
-$list-hight: 400px;
+$list-hight: 500px;
 $gap: 10px;
 $scrollbar-thickness: 17px;
-$list-header-height: 36px;
+$list-header-height: 45px;
 $list-footer-height: 36px;
 // Misc
 $list-border-radius: 5px;
@@ -54,7 +54,6 @@ $list-bg-color: #e2e4e6;
   ul {
     list-style: none;
     margin: 0;
-
     max-height: calc(100% - #{$list-header-height} - #{$list-footer-height});
     overflow-y: auto;
 
@@ -79,13 +78,11 @@ $list-bg-color: #e2e4e6;
 }
 
 .avatar-profile {
-  border-radiuś: 50%;
+  border-radius: 50%;
   font-size: 40px;
-  // border: 2px solid $gray;
   padding-left: 10px;
   padding-right: 10px;
-  // background-color: $blue;
-  color: $blue;
+
 }
 
 .plus {
@@ -116,10 +113,12 @@ $list-bg-color: #e2e4e6;
 }
 .volunteer-list-card-header {
     line-height: $list-header-height;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     border-top-left-radius: $list-border-radius;
     border-top-right-radius: $list-border-radius;
+    letter-spacing: 1px;
+    text-align: center;
   }
 
 .volunteer-list-card-footer {
@@ -129,4 +128,30 @@ $list-bg-color: #e2e4e6;
     color: #888;
   }
 
+.color-blue {
+  color: $blue;
+}
 
+.color-green {
+  color: $green;
+}
+
+.color-brown {
+  color: $special-brown;
+}
+
+.color-yellow {
+  color: $special-yellow;
+}
+
+.assign {
+  font-size: 25px;
+  padding-top: 10px;
+  color: $green;
+  margin-right: 10px;
+  &:hover {
+    color: $green;
+    opacity: 1;
+    cursor: pointer;
+  }
+}

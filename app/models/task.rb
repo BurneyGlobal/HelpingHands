@@ -10,4 +10,11 @@ class Task < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :status, presence: true, inclusion: { in: STATUS }
+
+  def has_volunteer?(user)
+    # task_volunteers.map do |task_volunteer|
+    #   task_volunteer.user
+    # end
+    task_volunteers.map(&:user).include? user
+  end
 end
