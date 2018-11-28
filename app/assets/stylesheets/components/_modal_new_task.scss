@@ -9,7 +9,8 @@ $model-content-size: 14px;
   font-size: 14px;
   color: black;
   background-color: $light-gray;
-
+  height: 650px;
+  margin-top: 70px;
 }
 
 .modal-title {
@@ -18,5 +19,6 @@ $model-content-size: 14px;
 }
 .modal-body {
   justify-content: center;
+
 
 }

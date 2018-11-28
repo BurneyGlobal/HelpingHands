@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get 'design', to: 'pages#design'
 
   resources :events, only: [ :show ] do
     resources :tasks, only: [ :show, :create ]
