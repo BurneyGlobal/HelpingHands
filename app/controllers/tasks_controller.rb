@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 class TasksController < ApplicationController
   before_action :set_event, except: [:mark_as_done]
 
