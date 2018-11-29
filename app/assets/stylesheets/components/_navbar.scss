@@ -23,7 +23,13 @@ nav.top-navb {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+nav .main_list ul li {
+  display: inline-block;
+  text-align: center;
+}
+
 nav .main_list a {
+
   font-weight: lighter;
   margin-right: 30px;
   padding-bottom: 4px;
@@ -31,6 +37,7 @@ nav .main_list a {
   font-size: 16px;
   text-decoration: none;
   color: grey;
+
 }
 
 

@@ -4,12 +4,25 @@
       <%= image_tag "handshake_lg_icon.png", id: "logo"  %>
     </div>
   <% end %>
+
   <div class="main_list">
-    <a href="#">Dashboard</a>
+    <% if user_signed_in? %>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+      <% else %>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Sign in</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    <% end %>
   </div>
 </nav>
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/scripts.js"></script>
 
 
