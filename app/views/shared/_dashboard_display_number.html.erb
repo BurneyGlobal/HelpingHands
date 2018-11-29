@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row" style="margin-left: -15px !important;">
+
+    <div class="col-xs-3" >
+      <div class="dashboard-display green">
+        <div class="dashboard-display-icon"><i class="fas fa-users"></i></div>
+        <div class="dashboard-display-header">Volunteers</div>
+        <div class="dashboard-display-number"><%= @volunteers.count %></div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="dashboard-display blue">
+        <div class="dashboard-display-icon"><i class="fas fa-tasks"></i></div>
+        <div class="dashboard-display-header">Tasks</div>
+        <div class="dashboard-display-number"><%= @tasks.count %></div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="dashboard-display red">
+        <div class="dashboard-display-icon"><i class="fas fa-warehouse"></i></div>
+        <div class="dashboard-display-header">Hubs</div>
+        <div class="dashboard-display-number"><%= @hubs.count %></div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="dashboard-display orange">
+        <div class="dashboard-display-icon"><i class="fas fa-boxes"></i></div>
+        <div class="dashboard-display-header">Assets</div>
+        <div class="dashboard-display-number"><%= @assets.count %></div>
+      </div>
+    </div>
+
+  </div>
+</div>

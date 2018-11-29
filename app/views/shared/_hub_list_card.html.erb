@@ -1,0 +1,18 @@
+<div class="lists">
+  <div class="list-card" style="margin-left: 95px;">
+    <div class="list-card-header">Hubs</div>
+    <ul>
+      <% @hubs.each do |hub| %>
+        <li>
+          <%#= link_to event_task_path(unassigned_task.event_id, unassigned_task) do %>
+          <%= hub.name %>
+          <%# end %>
+        </li>
+      <% end %>
+    </ul>
+    <div class="list-card-footer">
+      <%#= link_to '#', "data-toggle" => "modal", "data-target"=>"#myModal" do %>
+        <i class="fas fa-search"></i>
+      <%# end %>
+    </div>
+  </div>

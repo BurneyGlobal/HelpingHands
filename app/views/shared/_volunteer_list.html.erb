@@ -3,9 +3,14 @@
     <div class="volunteer-list-card-header">Volunteers</div>
       <ul>
         <% @volunteers.each do |volunteer| %>
+
           <li class="list-inline flex-body">
             <div class="avatar-profile"><i class="<%= volunteer.icon %>"></i></div>
-            <div class="flex-text"><%= volunteer.user.first_name %> <%= volunteer.user.last_name %></div>
+            <div class="flex-text">
+              <%= link_to '#', "data-toggle" => "modal", "data-target"=>"#ModalDetails#{volunteer.id}" do %>
+                <%= volunteer.user.first_name %> <%= volunteer.user.last_name %>
+              <% end %>
+            </div>
             <% if @task.has_volunteer?(volunteer.user) %>
               <div><i class="fas fa-check-circle assign"></i></div>
             <% else %>
@@ -14,6 +19,39 @@
               <% end %>
             <% end %>
           </li>
+            <div class="modal fade" id="ModalDetails<%= volunteer.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content-profile">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <!-- <h4 class="modal-title" id="ModalDetails<%= volunteer.id %>Label">
+                    name </h4> -->
+                  </div>
+                  <div class="modal-body">
+                    <div class="volunteer-profile-card">
+                      <div class="volunteer-profile-upper" style="background: url(<%= asset_path 'taxi_cphflood.jpg' %>);">
+                        <div class="volunteer-profile-avatar">
+                          <div class="avatar-profile" >
+                            <i class="<%= volunteer.icon %>"></i>
+                          </div>
+                        </div>
+                      </div>
+                        <h1><%= volunteer.user.first_name %> <%= volunteer.user.last_name %></h1>
+                        <h5><%= volunteer.user.profession.name %></h5>
+                      <div class="volunteer-profile-details">
+                        &nbsp;<i class="fas fa-envelope-open"></i><%= volunteer.user.email%><br>
+                        <i class="fas fa-mobile-alt phone-icon"></i> <%= volunteer.user.phone%>
+                      </div>
+                      <div class="list-inline volunteer-profile-social">
+                        <i class="fab fa-whatsapp-square whatsup-color"></i>
+                        <i class="fab fa-skype skype-color"></i>
+                        <i class="fab fa-facebook-square facebook-color"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         <% end %>
       </ul>
     <div class="volunteer-list-card-footer">

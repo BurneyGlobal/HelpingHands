@@ -15,19 +15,19 @@
       <div class="task-show-card-header"><%= @task.name %></div>
       <div class="task-show-card-body">
         <ul>
-           <li class="">
+           <li>
             <i class="fas fa-battery-half task-show-card-icons"></i>
             <div class="task-show-card-text status"><%= @task.status %> </div>
           </li>
-          <li class="">
+          <li>
             <i class="fas fa-hourglass-half task-show-card-icons"></i>
             <div class="task-show-card-text urgency"><%= @task.urgency.name %> </div>
           </li>
-          <li class="">
+          <li>
             <i class="fas fa-map task-show-card-icons location"></i>
             <div class="task-show-card-text"><%= @task.location.name %> </div>
           </li>
-          <li class="">
+          <li>
             <i class="fas fa-file-alt task-show-card-icons"></i>
             <div class="task-show-card-description"> <%= @task.description %> </div>
           </li>
@@ -35,6 +35,13 @@
       </div>
     </div>
       <div class="task-show-map-card">
+        <div
+          id="map"
+          style="width: 100%;
+          height: 100%; margin-left: 0px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
 
       </div>
   </div>

@@ -3,10 +3,10 @@
 $appbar-height: 40px;
 $navbar-height: 50px;
 $list-width: 300px;
-$list-hight: 480px;
+$list-hight: 400px;
 $gap: 10px;
 $scrollbar-thickness: 17px;
-$list-header-height: 45px;
+$list-header-height: 36px;
 $list-footer-height: 36px;
 // Misc
 $list-border-radius: 5px;
@@ -16,7 +16,7 @@ $board-bg-color: #0079bf;
 $appbar-bg-color: #0067a3;
 $list-bg-color: #e2e4e6;
 
-.volunteer-lists {
+.lists {
   display: flex;
   overflow-x: auto;
   //width: 100%; // This is needed for FF < 54
@@ -30,7 +30,7 @@ $list-bg-color: #e2e4e6;
   }
 }
 
-.volunteer-list-card {
+.list-card {
   width: $list-width;
   height: $list-hight;
   font-size: 14px;
@@ -54,11 +54,11 @@ $list-bg-color: #e2e4e6;
   ul {
     list-style: none;
     margin: 0;
+
     max-height: calc(100% - #{$list-header-height} - #{$list-footer-height});
     overflow-y: auto;
 
     li {
-      display: flex;
       background-color: #fff;
       padding: $gap;
       &:not(:last-child) {
@@ -77,81 +77,18 @@ $list-bg-color: #e2e4e6;
   }
 }
 
-.avatar-profile {
-  border-radius: 50%;
-  font-size: 40px;
-  padding-left: 10px;
-  padding-right: 10px;
-
-}
-
-.plus {
-  font-size: 25px;
-  padding-top: 10px;
-  color: $gray;
-  margin-right: 10px;
-  &:hover {
-    color: $green;
-    opacity: 1;
-    cursor: pointer;
-  }
-
-  &.active {
-  color: $green;
-  opacity: 1;
-  }
-}
-
-.flex-body {
-  flex: 1 1 auto;
-  justify-content: space-between;
-}
-
-.flex-text {
-  padding-top: 10px;
-  font-size: 18px;
-}
-.volunteer-list-card-header {
+.list-card-header {
     line-height: $list-header-height;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     border-top-left-radius: $list-border-radius;
     border-top-right-radius: $list-border-radius;
-    letter-spacing: 1px;
-    text-align: center;
   }
 
-.volunteer-list-card-footer {
+.list-card-footer {
     line-height: $list-footer-height;
     border-bottom-left-radius: $list-border-radius;
     border-bottom-right-radius: $list-border-radius;
     color: #888;
   }
 
-.color-blue {
-  color: $blue;
-}
-
-.color-green {
-  color: $green;
-}
-
-.color-brown {
-  color: $special-brown;
-}
-
-.color-yellow {
-  color: $special-yellow;
-}
-
-.assign {
-  font-size: 25px;
-  padding-top: 10px;
-  color: $green;
-  margin-right: 10px;
-  &:hover {
-    color: $green;
-    opacity: 1;
-    cursor: pointer;
-  }
-}

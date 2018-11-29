@@ -1,81 +1,119 @@
-.intro-display-widget {
-    background-color: #2D2F31;
-    position: relative;
-    margin: 50px;
-    width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    display: block;
+.volunteer-profile-card {
+  background-color: white;
+  height: 420px;
+  width: 300px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius:10px;
+  // box-shadow: 5px 5px 15px 10px #e2e4e6;
+  font-family: 'Lora', serif;
+
+
+    h1 {
+      color: black;
+      text-align: center;
+      position: relative;
+      top: 30px;
+      font-size: 35px;
+    }
+
+    h5 {
+      text-align: center;
+      position: relative;
+      top: 15px;
+      color: black;
+      line-height: 1.6;
+
+    }
 }
 
-.intro-display-widget .card-display {
-    background-color: #FF5A09;
-    padding: 10px;
-    width: 100%;
-    height: 165px;
-    margin:0;
-  box-shadow: 0px 3px 2px -1px rgba(0,0,0,0.75);
+.volunteer-profile-upper {
+  height: 150px;
+  width:300px;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));
+  background-position: center;
+  background-size: cover !important;
+  border-radius: 10px 10px 0px 0px;
+}
+.volunteer-profile-avatar {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  position: relative;
+  top: 160px;
+  left: 105px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
+
+
+
+  i {
+    text-align: center;
+    font-size: 40px;
+    margin-left:20px;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
+  }
+
+}
+.volunteer-profile-details {
+  position: relative;
+  top: 8px;
+  font-size: 18px;
+  color: gray;
+  background-color: white;
+  line-height: 1.6;
+
+  i {
+    color: #404040;
+    margin-left: 30px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+  }
+}
+.volunteer-profile-social {
+  font-size: 25px;
+  position: relative;
+  top: 30px;
+  left: 65px;
+  cursor: pointer;
+
+  i {
+    margin-left: 22px;
+
+
+    &::hover {
+      opacity: 0.6;
+    }
+
+  }
+}
+.facebook-color {
+  color: $facebook-blue;
 }
 
-.intro-display-widget .card-display .face {
-    display: inline-block;
-    float: left;
-    height: 120px;
-    width: 120px;
-    background-color: #2D2F31;
-    background-size: contain;
-    background-image: url(https://avatars3.githubusercontent.com/u/1109686?v=3&s=250);
-    border-radius: 50%;
-    border: 2px solid #DCD8D6;
-    position: relative;
-    top: 10px;
+.whatsup-color {
+  color: $whatsup-green;
 }
 
-.intro-display-widget .card-display .details {
-    display: block;
-    color: #eee;
-    width: 262px;
-    float: left;
-    position: relative;
-    top: 10px;
-    left: 10px;
+.skype-color {
+  color: $skype-blue;
 }
 
-.intro-display-widget .card-display .details ul {
-    margin: 5px 0 0 0;
-    padding-left: 5px;
-    list-style: none;
+.phone-icon {
+  padding-left: 8px;
 }
 
-.intro-display-widget .card-display .details ul li{
-    line-height: 1.7em;
-    padding-left: 5px;
-    font-size: 1em;
-}
-
-.intro-display-widget .card-display .details ul li a{
-    color: #eee;
-}
+.modal-content-profile {
+  font-family: $font-family-modal;
+  font-size: 14px;
+  color: black;
+  background-color: transparent;
+  height: 450px;
+  margin-top: 70px;
 
 
-.intro-display-widget .card-display .details .name{
-    font-size: 1.3em;
-    color: #fff;
-    padding: 0;
-    margin: 5px 0 0 10px;
-}
-
-.intro-display-widget .card-display .details .line-text{
-    display: block;
-    font-size: 14px;
-    padding: 0;
-    margin: 5px 0;
-}
-
-.intro-display-widget .desc {
-    font-size: 14px;
-    color: #fff;
-    padding:15px;
-    text-align: left;
 }

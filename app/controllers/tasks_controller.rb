@@ -3,8 +3,11 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+    @tasks = @event.tasks
+    @in_progress_tasks = @event.tasks.where("tasks.status = 'in progress'")
+    @done_tasks = @event.tasks.where("tasks.status = 'done'")
 
-    @markers += @tasks.map do |task|
+    @markers = @tasks.map do |task|
       {
         lng: task.location.longitude,
         lat: task.location.latitude,
@@ -14,21 +17,19 @@ class TasksController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:event_id])
     @task = Task.find(params[:id])
     @volunteers = @event.user_roles.where(user_roles: { role: "volunteer" })
     @assets = ResourceAsset.all
     @hubs = Hub.all
     @tasks = @event.tasks
 
-    @unassigned_tasks = @event.tasks.where("tasks.status = 'pending'")
-
-    @markers = @unassigned_tasks.map do |task|
+    @markers = [
       {
-        lng: task.location.longitude,
-        lat: task.location.latitude,
+        lng: @task.location.longitude,
+        lat: @task.location.latitude,
         color: '#33ACEE'
-      }
-    end
+      }]
   end
 
   def create
