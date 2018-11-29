@@ -68,6 +68,9 @@ locations << Location.create!(name: "Telia Parken Stadium, Per Henrik Lings All�
 locations << Location.create!(name: "City Hall, København Kommune, Rådhuspladsen 1, 1550 København", latitude: 55.675616, longitude: 12.569483) #13
 locations << Location.create!(name: "Copenhagen Business School, Solbjerg Pl. 3, 2000 Frederiksberg", latitude: 55.681430, longitude: 12.529953)  #14
 locations << Location.create!(name: "Nørrebrohallen Sports Complex, Nørrebrogade 208, 2200 København", latitude: 55.700021, longitude: 12.543457) #15
+locations << Location.create!(name: "Blegdamsvej 9, 2100 København", latitude: 55.695894, longitude: 12.566729) #16
+locations << Location.create!(name: "Fredens Kirke, Ryesgade 68B, 2100 København", latitude: 55.694611, longitude: 12.571438) #17
+locations << Location.create!(name: "Gefiion Gymnasium, Øster Voldgade 10, 1350 København", latitude: 55.688290, longitude: 12.582121) #18
 
 
 
@@ -135,37 +138,51 @@ tasks << Task.create!(name: "Photo Survey", description: "Survey the area. Drive
 
 
 # Hubs
-hubs << Hub.create!(name: "Gymnasium / Emergency Shelter", location: locations[5])
-hubs << Hub.create!(name: "Church", location: locations[6])
-hubs << Hub.create!(name: "Hospital", location: locations[7])
+hubs << Hub.create!(name: "City Hall Square, København Kommune", location: locations[13])
+hubs << Hub.create!(name: "Emergency Shelter at Gefion Gymnasium", location: locations[18])
+hubs << Hub.create!(name: "Fredens Kirke", location: locations[17])
+hubs << Hub.create!(name: "Gentofte Hospital", location: locations[7])
 hubs << Hub.create!(name: "Telia Parken Stadium", location: locations[12])
-hubs << Hub.create!(name: "City Hall Square", location: locations[13])
 hubs << Hub.create!(name: "Copenhagen Business School", location: locations[14])
 hubs << Hub.create!(name: "Nørrebrohallen Sports Complex", location: locations[15])
+hubs << Hub.create!(name: "Rigshospitalet", location: locations[16])
+hubs << Hub.create!(name: "Church", location: locations[6])
+hubs << Hub.create!(name: "Emergency Shelter at Gefion Gymnasium", location: locations[5])
+
+
+
 
 
 # Categories
-categories << Category.create!(name: "Water")
-categories << Category.create!(name: "Food")
-categories << Category.create!(name: "Tools")
-categories << Category.create!(name: "Medical supplies")
-categories << Category.create!(name: "Supplies")
-categories << Category.create!(name: "Vehicle")
-categories << Category.create!(name: "Construction material")
-categories << Category.create!(name: "Other")
+categories << Category.create!(name: "Water") #0
+categories << Category.create!(name: "Food") #1
+categories << Category.create!(name: "Tools")#2
+categories << Category.create!(name: "Medical supplies") #3
+categories << Category.create!(name: "Supplies") #4
+categories << Category.create!(name: "Vehicle") #5
+categories << Category.create!(name: "Construction material") #6
+categories << Category.create!(name: "Cleaning supplies") #7
+categories << Category.create!(name: "Other") #8
 
 # ResourceAssets
-resource_assets << ResourceAsset.create!(name: "Water bottles", location: hubs[1].location, category: categories[0])
-resource_assets << ResourceAsset.create!(name: "Blankets", location: hubs[2].location, category: categories[4])
-resource_assets << ResourceAsset.create!(name: "Truck", location: tasks[3].location, category: categories[5])
-resource_assets << ResourceAsset.create!(name: "Chainsaw", location: tasks[2].location, category: categories[2])
-resource_assets << ResourceAsset.create!(name: "Shingles", location: hubs[1].location, category: categories[6])
-resource_assets << ResourceAsset.create!(name: "Sandwiches", location: hubs[1].location, category: categories[1])
-resource_assets << ResourceAsset.create!(name: "Bandages", location: hubs[2].location, category: categories[3])
-resource_assets << ResourceAsset.create!(name: "Brooms", location: hubs[2].location, category: categories[3])
-resource_assets << ResourceAsset.create!(name: "Mops", location: hubs[2].location, category: categories[3])
-resource_assets << ResourceAsset.create!(name: "Trash Bags", location: hubs[2].location, category: categories[3])
-resource_assets << ResourceAsset.create!(name: "Surface Disinfectant", location: hubs[2].location, category: categories[3])
+resource_assets << ResourceAsset.create!(name: "Pick-up Truck", resourceable: tasks[3], location: tasks[3].location, category: categories[5])
+resource_assets << ResourceAsset.create!(name: "Water bottles", resourceable: hubs[9], location: hubs[9].location, category: categories[0])
+resource_assets << ResourceAsset.create!(name: "Cargo-van", resourceable: tasks[3], location: tasks[3].location, category: categories[5])
+resource_assets << ResourceAsset.create!(name: "Sleeping Bags", location: hubs[7].location, category: categories[4])
+resource_assets << ResourceAsset.create!(name: "Blankets", resourceable: hubs[2], location: hubs[2].location, category: categories[4])
+resource_assets << ResourceAsset.create!(name: "Mini-van", location: tasks[3].location, category: categories[5])
+resource_assets << ResourceAsset.create!(name: "Tow Truck", location: tasks[5].location, category: categories[5])
+resource_assets << ResourceAsset.create!(name: "SUV: Seats 7", location: tasks[12].location, category: categories[5])
+resource_assets << ResourceAsset.create!(name: "Chainsaw", location: tasks[13].location, category: categories[2])
+resource_assets << ResourceAsset.create!(name: "Shingles", location: hubs[6].location, category: categories[6])
+resource_assets << ResourceAsset.create!(name: "Sandwiches", location: hubs[6].location, category: categories[1])
+resource_assets << ResourceAsset.create!(name: "Bandages", location: hubs[4].location, category: categories[3])
+resource_assets << ResourceAsset.create!(name: "Brooms", location: hubs[8].location, category: categories[7])
+resource_assets << ResourceAsset.create!(name: "Mops", location: hubs[8].location, category: categories[7])
+resource_assets << ResourceAsset.create!(name: "Shovels", location: hubs[3].location, category: categories[7])
+resource_assets << ResourceAsset.create!(name: "Trash Bags", location: hubs[7].location, category: categories[7])
+resource_assets << ResourceAsset.create!(name: "Surface Disinfectant", resourceable: hubs[7], location: hubs[7].location, category: categories[7])
+
 
 # Task volunteers
 task_volunteers << TaskVolunteer.create!(user: users[0], task: tasks[0])
