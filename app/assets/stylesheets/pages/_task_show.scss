@@ -13,9 +13,10 @@ $card-content-size: 14px;
 .task-show-volunteer-list {
   height: 90%;
   width: 400px;
-  margin-left: 120px;
+  margin-left: 150px;
   margin-right: 100px;
   margin-top: 50px;
+
 }
 
 .task-show-info-map-box {
@@ -23,12 +24,12 @@ $card-content-size: 14px;
 }
 
 .task-show-info-card {
-  border: 2px solid $gray;
+  border: 1px solid $gray;
   border-radius: 5px;
   background-color: white;
   height: 40%;
   width: 500px;
-  margin-left: 70px;
+  margin-left: 50px;
   margin-right: 100px;
   margin-bottom: 50px;
   margin-top: 50px;
@@ -72,7 +73,7 @@ $card-content-size: 14px;
   height: 40%;
   width: 500px;
   background-color: white;
-  margin-left: 70px;
+  margin-left: 50px;
   margin-right: 100px;
   margin-bottom: 50px;
 }

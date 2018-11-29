@@ -1,0 +1,38 @@
+$font-family-modal: 'Montserrat', sans-serif;
+$label-size: 10px;
+$card-content-size: 14px;
+
+.task-index-container {
+  display: flex;
+  align-content: space-around;
+  height: calc(100vh-280px);
+  background-size: cover !important;
+  align-items: space-around;
+  // text-align:center;
+}
+
+.task-index-map {
+  height: 90%;
+  width: 400px;
+  margin-left: 150px;
+  margin-right: 100px;
+  margin-top: 50px;
+  border: 1px solid $gray;
+
+}
+
+.task-index-task-progress {
+  height: 90%;
+  width: 400px;
+  margin-left: 150px;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+.task-index-task-done {
+  height: 90%;
+  width: 400px;
+  margin-left: 150px;
+  margin-right: 100px;
+  margin-top: 50px;
+}
