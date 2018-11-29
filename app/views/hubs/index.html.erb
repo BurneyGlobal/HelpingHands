@@ -1,10 +1,12 @@
 
 <div class="buttons" style="text-align:center;">
-  <%= render 'shared/dashboard_display_number' %>
+  <%= render 'shared/dashboard_display_number_hubs' %>
 </div>
 
-<div class="grid">
-
+<div class="wrapper">
+    <div style="color: rgba(20,20,20,1); font-size: 32px;margin-left: 40px;margin-top: 20px;">Flood in Copenhagen</div>
+    <h3 style="margin-left: 40px; color: rgba(20,20,20,1);">Nearby <span style="color: #C54D49">hubs</span>:</h3>
+    <div class="grid">
   <div
     id="map"
     style="width: 863px;
@@ -13,8 +15,11 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 
-  <!-- <div class="card"> <%#= render 'shared/dashboard_list_card' %> </div> -->
+<div class="card"> <%= render 'shared/dashboard_list_card' %> </div>
+
 
 
 </div>
 
+
+</div>

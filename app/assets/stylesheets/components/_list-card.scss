@@ -33,7 +33,6 @@ $list-bg-color: #e2e4e6;
 .list-card {
   width: $list-width;
   height: $list-hight;
-  font-size: 14px;
   line-height: 1.3em;
   > * {
     background-color: $list-bg-color;
@@ -59,6 +58,8 @@ $list-bg-color: #e2e4e6;
     overflow-y: auto;
 
     li {
+      font-size: 14px;
+      cursor: pointer;
       background-color: #fff;
       padding: $gap;
       &:not(:last-child) {
@@ -75,19 +76,50 @@ $list-bg-color: #e2e4e6;
       }
     }
   }
-}
-
-.list-card-header {
+  .list-card-header {
+    text-align: center;
     line-height: $list-header-height;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
+    padding: 15px 10px;
     border-top-left-radius: $list-border-radius;
     border-top-right-radius: $list-border-radius;
   }
 
-.list-card-footer {
+  .list-card-footer {
     line-height: $list-footer-height;
     border-bottom-left-radius: $list-border-radius;
     border-bottom-right-radius: $list-border-radius;
     color: #888;
   }
+}
+
+
+.add-task-button {
+  text-align: center;
+  padding: 1px 0px;
+  padding-top: 20px;
+  i {
+    transition: 0.2s ease;
+    margin-right: 10px;
+    margin-left: -10px;
+  }
+  p {
+    transition: background 0.2s ease;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    &:hover {
+
+    }
+  }
+  &:hover i {
+    transform: rotate(90deg);
+    transform-origin: center center;
+  }
+  &:hover p {
+    background-color: rgba(80,80,80,1);
+    color: white;
+  }
+}
+
