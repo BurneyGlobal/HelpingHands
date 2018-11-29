@@ -17,34 +17,39 @@
     ></div>
 
 
-  <div class="task-index-task-progress">
+  <!-- <div class="task-index-task-progress"> -->
     <div class="lists-in-progress">
-      <div class="list-card-in-progress" style="margin-left: 0px; width: 250px;">
+      <div class="list-card-in-progress">
         <div class="list-in-progress-card-header">In progress</div>
         <ul>
           <% @in_progress_tasks.each do |in_progress_task| %>
-            <li id="task-<%= in_progress_task.id %>">
-              <%= link_to event_task_path(in_progress_task.event_id, in_progress_task) do %>
+            <li class="list-inline flex-body" id="task-<%= in_progress_task.id %>">
+              <div class="flex-text">
+                <%= link_to event_task_path(in_progress_task.event_id, in_progress_task) do %>
                 <%= in_progress_task.name %>
-                <%= link_to mark_task_done_path(in_progress_task), method: :patch, remote: true, id: "mark-icon-#{in_progress_task.id}" do %>
-                  <i class="fas fa-check-circle"></i>
-                <% end %>
+              </div>
+              <%= link_to mark_task_done_path(in_progress_task), method: :patch, remote: true, id: "mark-icon-#{in_progress_task.id}" do %>
+                  <!-- <i class="fas fa-check-circle"></i> -->
+              <div> <i class="fas fa-check-circle done-task"></i></div>
+              <% end %>
               <% end %>
             </li>
           <% end %>
         </ul>
-         <div class="list-in-progress-card-footer">
-          <%= link_to '#' do %>
-            <i class="fas fa-search"></i>
+        <div class="list-in-progress-card-footer">
+          <%= link_to '#', "data-toggle" => "modal", "data-target"=>"#myModal" do %>
+
+                <i class="fas fa-search"></i>
+
           <% end %>
         </div>
       </div>
      </div>
-  </div>
-<div class="task-index-task-done">
-  <div class="lists">
-    <div class="list-card"  style="margin-left: 0px;">
-      <div class="list-card-header">Done</div>
+  <!-- </div> -->
+<!-- <div class="task-index-task-done"> -->
+  <div class="lists-in-progress">
+    <div class="list-card-in-progress"  style="margin-left: 0px;">
+      <div class="list-in-progress-card-header">Done</div>
       <ul id="done-list">
         <%  @done_tasks.each do |done_task| %>
           <li>
@@ -54,13 +59,13 @@
           </li>
         <% end %>
       </ul>
-       <div class="volunteer-list-card-footer">
+       <div class="list-in-progress-card-footer">
         <%= link_to '#' do %>
           <i class="fas fa-search"></i>
         <% end %>
       </div>
     </div>
    </div>
-  </div>
+ <!--  </div> -->
 </div>
 
