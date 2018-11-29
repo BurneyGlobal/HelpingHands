@@ -8,20 +8,30 @@ class EventsController < ApplicationController
     @assets = ResourceAsset.all
     @hubs = Hub.all
 
-    @markers = @tasks.map do |task|
-      {
-        lng: task.location.longitude,
-        lat: task.location.latitude
-      }
-    end
-
-    @markers += @assets.map do |asset|
+    @markers = @assets.map do |asset|
       {
         lng: asset.location.longitude,
         lat: asset.location.latitude,
         color: '#E67E21'
       }
     end
+
+    @markers += @tasks.map do |task|
+      {
+        lng: task.location.longitude,
+        lat: task.location.latitude,
+        color: '#33ACEE'
+      }
+    end
+
+    @markers += @hubs.map do |task|
+      {
+        lng: task.location.longitude,
+        lat: task.location.latitude,
+        # color: '#C54D49'
+      }
+    end
+
   end
 end
 
