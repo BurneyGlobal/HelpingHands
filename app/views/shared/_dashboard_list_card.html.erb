@@ -4,7 +4,7 @@
     <ul>
       <% @unassigned_tasks.each do |unassigned_task| %>
         <li>
-          <%= link_to event_task_path(unassigned_task) do %>
+          <%= link_to event_task_path(@event.id,unassigned_task) do %>
             <%= unassigned_task.name %>
           <% end %>
         </li>
