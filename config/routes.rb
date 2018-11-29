@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'design', to: 'pages#design'
 
   resources :events, only: [ :show ] do
-    resources :tasks, only: [ :show, :create ]
+    resources :tasks, only: [:index, :show, :create ]
     resources :hubs, only: [ :index ]
     resources :resource_assets, only: [ :index ]
   end
