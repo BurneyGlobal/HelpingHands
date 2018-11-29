@@ -23,9 +23,12 @@
         <div class="list-in-progress-card-header">In progress</div>
         <ul>
           <% @in_progress_tasks.each do |in_progress_task| %>
-            <li>
+            <li id="task-<%= in_progress_task.id %>">
               <%= link_to event_task_path(in_progress_task.event_id, in_progress_task) do %>
-              <%= in_progress_task.name %>
+                <%= in_progress_task.name %>
+                <%= link_to mark_task_done_path(in_progress_task), method: :patch, remote: true, id: "mark-icon-#{in_progress_task.id}" do %>
+                  <i class="fas fa-check-circle"></i>
+                <% end %>
               <% end %>
             </li>
           <% end %>
@@ -40,13 +43,13 @@
   </div>
 <div class="task-index-task-done">
   <div class="lists">
-    <div class="list-card" style="margin-left: 0px;">
+    <div class="list-card"  style="margin-left: 0px;">
       <div class="list-card-header">Done</div>
-      <ul>
+      <ul id="done-list">
         <%  @done_tasks.each do |done_task| %>
           <li>
             <%= link_to event_task_path(done_task.event_id, done_task) do %>
-            <%= done_task.name %>
+              <%= done_task.name %>
             <% end %>
           </li>
         <% end %>

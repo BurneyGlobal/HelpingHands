@@ -1,5 +1,7 @@
+require 'pry-byebug'
+
 class TasksController < ApplicationController
-  before_action :set_event
+  before_action :set_event, except: [:mark_as_done]
 
   def index
     # @tasks = Task.all
@@ -17,6 +19,12 @@ class TasksController < ApplicationController
         color: '#33ACEE'
       }
     end
+  end
+
+  def mark_as_done
+    @task = Task.find(params[:id])
+    @task.status = "done"
+    @task.save
   end
 
   def show

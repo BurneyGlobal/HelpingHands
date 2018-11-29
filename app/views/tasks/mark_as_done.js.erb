@@ -1,0 +1,10 @@
+
+function removeAndAppendCard() {
+  const card = document.getElementById("task-<%= @task.id %>");
+  const doneList = document.getElementById("done-list");
+  card.parentElement.removeChild(card);
+  const newHTML = "<li><%= @task.name%></li>"
+  doneList.insertAdjacentHTML("afterbegin", newHTML);
+}
+
+removeAndAppendCard();
