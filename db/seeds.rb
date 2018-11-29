@@ -52,17 +52,25 @@ users << User.create!(email:"morten@gmail.com", password: "123456", profession: 
 users << User.create!(email:"ivone@gmail.com", password: "123456", profession: professions[0], first_name: "Ivone", last_name: "Feer", phone: "12345678")
 
 # Locations
-locations << Location.create!(name: "Copenhagen", latitude: 55.6761, longitude: 12.5683)
-locations << Location.create!(name: "Ordrup", latitude: 55.7631, longitude: 12.5794)
-locations << Location.create!(name: "Valby", latitude: 55.6617, longitude: 12.5168)
-locations << Location.create!(name: "Ballerup", latitude: 55.7265, longitude: 12.3578)
-locations << Location.create!(name: "Kastrup", latitude: 55.6108, longitude: 12.6052)
-locations << Location.create!(name: "Hellerup School", latitude: 55.7367, longitude: 12.5692)
-locations << Location.create!(name: "Charlottenlund Church", latitude: 55.7564, longitude: 12.5798)
-locations << Location.create!(name: "Gentofte Hospital", latitude: 55.7392, longitude: 12.5476)
-locations << Location.create!(name: "Stockholm", latitude: 59.3293, longitude: 18.0686)
-locations << Location.create!(name: "Helsinki", latitude: 60.1699, longitude: 24.9384)
-locations << Location.create!(name: "Gdansk", latitude: 54.3520, longitude: 18.6466)
+locations << Location.create!(name: "Copenhagen", latitude: 55.6761, longitude: 12.5683)  #0
+locations << Location.create!(name: "Ordrup", latitude: 55.7631, longitude: 12.5794)      #1
+locations << Location.create!(name: "Valby", latitude: 55.6617, longitude: 12.5168)       #2
+locations << Location.create!(name: "Ballerup", latitude: 55.7265, longitude: 12.3578)    #3
+locations << Location.create!(name: "Kastrup", latitude: 55.6108, longitude: 12.6052)     #4
+locations << Location.create!(name: "Hellerup School", latitude: 55.7367, longitude: 12.5692) #5
+locations << Location.create!(name: "Charlottenlund Church", latitude: 55.7564, longitude: 12.5798) #6
+locations << Location.create!(name: "Gentofte Hospital", latitude: 55.7392, longitude: 12.5476) #7
+locations << Location.create!(name: "Stockholm", latitude: 59.3293, longitude: 18.0686) #8
+locations << Location.create!(name: "Helsinki", latitude: 60.1699, longitude: 24.9384)  #9
+locations << Location.create!(name: "Gdansk", latitude: 54.3520, longitude: 18.6466)  #10
+locations << Location.create!(name: "Øster Farimagsgade 16", latitude: 55.690378, longitude: 12.575274) #11
+locations << Location.create!(name: "Telia Parken Stadium, Per Henrik Lings Allé 2, 2100 København", latitude: 55.702881, longitude: 12.570290) #12
+locations << Location.create!(name: "City Hall, København Kommune, Rådhuspladsen 1, 1550 København", latitude: 55.675616, longitude: 12.569483) #13
+locations << Location.create!(name: "Copenhagen Business School, Solbjerg Pl. 3, 2000 Frederiksberg", latitude: 55.681430, longitude: 12.529953)  #14
+locations << Location.create!(name: "Nørrebrohallen Sports Complex, Nørrebrogade 208, 2200 København", latitude: 55.700021, longitude: 12.543457) #15
+
+
+
 
 # Events
 events << Event.create!(name: "Flood in Copenhagen", location: locations[0])
@@ -96,25 +104,45 @@ tasks << Task.create!(name: "Fix the bridge", description: "Traffic lights falle
           urgency: urgencies[2], location: locations[1], event: events[0])
 tasks << Task.create!(name: "Help a cat in a tree", description: "Cat in a tree",
           urgency: urgencies[0], location: locations[2], event: events[0])
-tasks << Task.create!(name: "Remove a tree", description: "Remove trees from the street",
+tasks << Task.create!(name: "Fallen tree", description: "Remove trees from the street",
           urgency: urgencies[1], location: locations[3], event: events[0], status: "in progress")
-tasks << Task.create!(name: "Pick up food from the church", description: "Pick up food from the kitchen and take to the emergency shelter",
+tasks << Task.create!(name: "Food Distribution", description: "Pick up food from the church food pantry and deliver to the emergency shelter",
           urgency: urgencies[0], location: locations[4], event: events[0], status: "in progress")
-tasks << Task.create!(name: "Fix the roof of a school", description: "The roof is leaking, should be fixed, because of heavy rain",
+tasks << Task.create!(name: "Roof Repair at Elementary School", description: "The roof is leaking, should be fixed, because of heavy rain",
           urgency: urgencies[2], location: locations[5], event: events[0], status: "in progress")
-tasks << Task.create!(name: "Car in a ditch", description: "Driver would need help to get the car back to a road",
+tasks << Task.create!(name: "Vehicle stuck in ditch", description: "Caution! 4-door sedan needs to be pulled out of ditch and towed. Driver expecting call to help get car on tow",
           urgency: urgencies[0], location: locations[3], event: events[0])
 tasks << Task.create!(name: "Ten people waiting to get a lift", description: "People looking for a transport to get to the emergency shelter",
           urgency: urgencies[1], location: locations[2], event: events[0], status: "done")
 tasks << Task.create!(name: "Water in a cellar", description: "Somebody would need help to pump water out of the cellar",
           urgency: urgencies[1], location: locations[4], event: events[0], status: "done")
 tasks << Task.create!(name: "Boat leaking", description: "Emergency service boat got hit and is leaking and would have to be transported to a service",
-          urgency: urgencies[2], location: locations[1], event: events[0], status: "done")
+          urgency: urgencies[2], location: locations[1], event: events[0], status: "in progress")
+tasks << Task.create!(name: "Mold Remediation", description: "Residential building, Spores of mold in cellar, needs porper remediation ",
+          urgency: urgencies[2], location: locations[1], event: events[0], status: "in progress")
+tasks << Task.create!(name: "Clear Cellar", description: "Damaged furniture in the cellar needs to be cleared out. All items should go in blue dumpster.",
+          urgency: urgencies[2], location: locations[11], event: events[0], status: "in progress")
+tasks << Task.create!(name: "Mold Remediation", description: "Spores of mold in cellar of multi-dwelling unit",
+          urgency: urgencies[2], location: locations[1], event: events[0], status: "in progress")
+tasks << Task.create!(name: "Mold Remediation", description: "Spores of mold in cellar of single-detached home",
+          urgency: urgencies[2], location: locations[1], event: events[0], status: "in progress")
+tasks << Task.create!(name: "Clear Debris", description: "Water damaged office furniture in basement office needs to be cleared out. All items should go into commercial dumpster.",
+          urgency: urgencies[2], location: locations[11], event: events[0], status: "in progress")
+tasks << Task.create!(name: "Fallen scaffolding", description: "A scaffold has collapsed and structural debris needs to be cleared.",
+          urgency: urgencies[2], location: locations[11], event: events[0], status: "in progress")
+tasks << Task.create!(name: "Photo Survey", description: "Survey the area. Drive around and take photos of debris or visible structural damage. Take note of the address and please be as descriptive as possble. Submit photos to your lead coordinator through the Helping Hands App.",
+          urgency: urgencies[2], location: locations[11], event: events[0], status: "in progress")
+
 
 # Hubs
-hubs << Hub.create!(name: "School / Emergency Shelter", location: locations[5])
+hubs << Hub.create!(name: "Gymnasium / Emergency Shelter", location: locations[5])
 hubs << Hub.create!(name: "Church", location: locations[6])
 hubs << Hub.create!(name: "Hospital", location: locations[7])
+hubs << Hub.create!(name: "Telia Parken Stadium", location: locations[12])
+hubs << Hub.create!(name: "City Hall Square", location: locations[13])
+hubs << Hub.create!(name: "Copenhagen Business School", location: locations[14])
+hubs << Hub.create!(name: "Nørrebrohallen Sports Complex", location: locations[15])
+
 
 # Categories
 categories << Category.create!(name: "Water")
@@ -134,6 +162,10 @@ resource_assets << ResourceAsset.create!(name: "Chainsaw", location: tasks[2].lo
 resource_assets << ResourceAsset.create!(name: "Shingles", location: hubs[1].location, category: categories[6])
 resource_assets << ResourceAsset.create!(name: "Sandwiches", location: hubs[1].location, category: categories[1])
 resource_assets << ResourceAsset.create!(name: "Bandages", location: hubs[2].location, category: categories[3])
+resource_assets << ResourceAsset.create!(name: "Brooms", location: hubs[2].location, category: categories[3])
+resource_assets << ResourceAsset.create!(name: "Mops", location: hubs[2].location, category: categories[3])
+resource_assets << ResourceAsset.create!(name: "Trash Bags", location: hubs[2].location, category: categories[3])
+resource_assets << ResourceAsset.create!(name: "Surface Disinfectant", location: hubs[2].location, category: categories[3])
 
 # Task volunteers
 task_volunteers << TaskVolunteer.create!(user: users[0], task: tasks[0])
