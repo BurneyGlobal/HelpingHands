@@ -2,8 +2,11 @@ class TasksController < ApplicationController
   before_action :set_event
 
   def index
-    @tasks = Task.all
+    # @tasks = Task.all
     @tasks = @event.tasks
+    @volunteers = @event.user_roles.where(user_roles: { role: "volunteer" })
+    @assets = ResourceAsset.all
+    @hubs = Hub.all
     @in_progress_tasks = @event.tasks.where("tasks.status = 'in progress'")
     @done_tasks = @event.tasks.where("tasks.status = 'done'")
 

@@ -2,7 +2,7 @@
 // Layout
 $appbar-height: 40px;
 $navbar-height: 50px;
-$list-width: 300px;
+$list-width: 360px;
 $list-hight: 480px;
 $gap: 10px;
 $scrollbar-thickness: 17px;
@@ -117,7 +117,7 @@ $list-bg-color: #e2e4e6;
     font-weight: bold;
     border-top-left-radius: $list-border-radius;
     border-top-right-radius: $list-border-radius;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-align: center;
   }
 
