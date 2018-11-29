@@ -4,6 +4,9 @@
 </div>
 
 <div class="wrapper">
+  <%= link_to event_path(Event.find_by(name: "Flood in Copenhagen")) do  %>
+    <div class="btn btn-medium">Dashboard</div>
+ <% end %>
   <div style="color: rgba(20,20,20,1); font-size: 32px;margin-left: 71px;">Flood in Copenhagen</div>
     <h3 style="margin-left: 71px; color: rgba(20,20,20,1);">Nearby <span style="color: #E67E22">assets</span>:</h3>
     <div class="grid">
