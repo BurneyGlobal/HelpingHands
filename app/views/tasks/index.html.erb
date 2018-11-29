@@ -1,5 +1,5 @@
 <div class="buttons" style="text-align:center;">
-  <%= render 'shared/dashboard_display_number' %>
+  <%= render 'shared/dashboard_display_number_hubs' %>
 </div>
 
 <div class="task-index-container">
@@ -7,9 +7,9 @@
     ...
   </div>
   <div class="task-index-task-progress">
-    <div class="lists">
-      <div class="list-card" style="margin-left: 95px;">
-        <div class="list-card-header">In progress</div>
+    <div class="lists-in-progress">
+      <div class="list-card-in-progress" style="margin-left: 95px;">
+        <div class="list-in-progress-card-header">In progress</div>
         <ul>
           <% @in_progress_tasks.each do |in_progress_task| %>
             <li>
@@ -19,7 +19,7 @@
             </li>
           <% end %>
         </ul>
-         <div class="volunteer-list-card-footer">
+         <div class="list-in-progress-card-footer">
           <%= link_to '#' do %>
             <i class="fas fa-search"></i>
           <% end %>
