@@ -5,7 +5,7 @@ $card-content-size: 14px;
 .task-show-container {
   display: flex;
   align-content: space-around;
-  height: calc(100vh-120px);
+  height: calc(100vh-280px);
   background-size: cover !important;
   align-items: space-around;
 }
@@ -24,7 +24,7 @@ $card-content-size: 14px;
 
 .task-show-info-card {
   border: 2px solid $gray;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: white;
   height: 40%;
   width: 500px;
@@ -33,6 +33,7 @@ $card-content-size: 14px;
   margin-bottom: 50px;
   margin-top: 50px;
   color: $dark-gray;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   // position: relative;
 }
 .task-show-card-header {
@@ -43,13 +44,13 @@ $card-content-size: 14px;
   font-size: 20px;
   padding-bottom: 8px;
   background-color: #e2e4e6;
-  box-shadow: 10px 36px 29px -26px rgba(226,228,230,1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .task-show-card-body {
-  font-size: 15px;
+
   color: $dark-gray;
-  line-height: 2;
+  line-height: 1.6;
   padding-left: 20px;
 
   ul {
@@ -84,15 +85,15 @@ $card-content-size: 14px;
 }
 
 .task-show-card-text {
-  padding-right: 20px;
-  font-size: 15px;
-  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 20px;
+  padding-left: 10px;
   flex: wrap;
 }
 
 .task-show-card-description {
   padding-right: 20px;
-  font-size: 14px;
+  font-size: 16px;
   padding-left: 10px;
   flex: wrap;
 }
@@ -107,3 +108,5 @@ $card-content-size: 14px;
 .urgency {
   padding-left: 16px;
 }
+
+
