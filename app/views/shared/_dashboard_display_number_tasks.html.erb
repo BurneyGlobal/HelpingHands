@@ -1,0 +1,47 @@
+<div style="background-color: rgba(240,240,240,1);">
+  <div class="container" style="padding-top:100px;">
+  <div class="row" style="margin-left: -15px !important;">
+
+    <div class="col-xs-3" >
+      <%= link_to "#" do %>
+        <div class="dashboard-display green active">
+          <div class="dashboard-display-icon"><i class="fas fa-users"></i></div>
+          <div class="dashboard-display-header">Volunteers</div>
+          <div class="dashboard-display-number"><%= @volunteers.count %></div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-xs-3">
+      <%= link_to event_path(@event) do %>
+        <div class="dashboard-display blue">
+          <div class="dashboard-display-icon"><i class="fas fa-tasks"></i></div>
+          <div class="dashboard-display-header">Tasks</div>
+          <div class="dashboard-display-number"><%= @tasks.count %></div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-xs-3">
+      <%= link_to event_hubs_path(@event) do %>
+        <div class="dashboard-display red active">
+          <div class="dashboard-display-icon"><i class="fas fa-warehouse"></i></div>
+          <div class="dashboard-display-header">Hubs</div>
+          <div class="dashboard-display-number"><%= @hubs.count %></div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-xs-3">
+      <%= link_to event_resource_assets_path(@event) do %>
+        <div class="dashboard-display orange active">
+          <div class="dashboard-display-icon"><i class="fas fa-boxes"></i></div>
+          <div class="dashboard-display-header">Assets</div>
+          <div class="dashboard-display-number"><%= @assets.count %></div>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+</div>

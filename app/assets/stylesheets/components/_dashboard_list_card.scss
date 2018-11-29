@@ -77,17 +77,10 @@ $list-bg-color: #e2e4e6;
   }
 }
 
-.list-card-header {
-    line-height: $list-header-height;
-    font-size: 16px;
-    font-weight: bold;
-    border-top-left-radius: $list-border-radius;
-    border-top-right-radius: $list-border-radius;
-  }
 
 .list-card-footer {
-    line-height: $list-footer-height;
-    border-bottom-left-radius: $list-border-radius;
-    border-bottom-right-radius: $list-border-radius;
-    color: #888;
-  }
+  line-height: $list-footer-height;
+  border-bottom-left-radius: $list-border-radius;
+  border-bottom-right-radius: $list-border-radius;
+  color: #888;
+}

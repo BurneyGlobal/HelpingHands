@@ -9,12 +9,14 @@
 
 .grid {
   display: grid;
-  margin-top: 20px;
   margin-left: 0px;
   margin-right: 0px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 25% 25% 25% 25%;
+  padding-top: 10px;
+
 }
+
 
 .card {
   grid-row: 1 / span 1;
@@ -22,6 +24,8 @@
 }
 
 #map {
+  border: 2px solid rgba(220,220,220,1);
+  border-radius: 2px;
   grid-row: 1 / span 4;
   grid-column: 1 / span 2;
 }
