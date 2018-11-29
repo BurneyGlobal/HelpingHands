@@ -5,25 +5,27 @@
   position: absolute;
   margin: auto;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
   border-radius:10px;
-  box-shadow: 5px 5px 15px 10px #e2e4e6;
+  // box-shadow: 5px 5px 15px 10px #e2e4e6;
   font-family: 'Lora', serif;
+
 
     h1 {
       color: black;
       text-align: center;
       position: relative;
       top: 30px;
+      font-size: 35px;
     }
 
-    h3 {
+    h5 {
       text-align: center;
       position: relative;
-      top: 10px;
+      top: 15px;
       color: black;
+      line-height: 1.6;
 
     }
 }
@@ -38,13 +40,23 @@
 }
 .volunteer-profile-avatar {
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
   position: relative;
-  top: 120px;
-  left: 115px;
-  background-color: white;
-  border: 1px solid black;
+  top: 160px;
+  left: 105px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
+
+
+
+  i {
+    text-align: center;
+    font-size: 40px;
+    margin-left:20px;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
+  }
 
 }
 .volunteer-profile-details {
@@ -53,6 +65,7 @@
   font-size: 18px;
   color: gray;
   background-color: white;
+  line-height: 1.6;
 
   i {
     color: #404040;
@@ -73,6 +86,7 @@
 
 
     &::hover {
+      opacity: 0.6;
     }
 
   }
@@ -87,4 +101,19 @@
 
 .skype-color {
   color: $skype-blue;
+}
+
+.phone-icon {
+  padding-left: 8px;
+}
+
+.modal-content-profile {
+  font-family: $font-family-modal;
+  font-size: 14px;
+  color: black;
+  background-color: transparent;
+  height: 450px;
+  margin-top: 70px;
+
+
 }

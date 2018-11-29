@@ -3,6 +3,9 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+    @tasks = @event.tasks
+    @in_progress_tasks = @event.tasks.where("tasks.status = 'in progress'")
+    @done_tasks = @event.tasks.where("tasks.status = 'done'")
 
     @markers = @tasks.map do |task|
       {
