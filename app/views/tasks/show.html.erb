@@ -3,6 +3,9 @@
 </div>
 
 <div class="task-show-container">
+    <%= link_to event_path(Event.find_by(name: "Flood in Copenhagen")) do  %>
+    <div class="btn btn-medium">Dashboard</div>
+ <% end %>
   <div class="task-show-volunteer-list">
 
    <%= render 'shared/volunteer_list' %>

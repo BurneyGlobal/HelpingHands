@@ -4,19 +4,21 @@
 </div>
 
 <div class="wrapper">
+   <%= link_to event_path(Event.find_by(name: "Flood in Copenhagen")) do  %>
+    <div class="btn btn-medium">Dashboard</div>
+ <% end %>
     <div style="color: rgba(20,20,20,1); font-size: 32px;margin-left: 71px;margin-top: 20px;">Flood in Copenhagen</div>
     <h3 style="margin-left: 71px; color: rgba(20,20,20,1);">Nearby <span style="color: #C54D49">hubs</span>:</h3>
     <div class="grid">
-  <div
-    id="map"
-    style="width: 835px;
-    height: 500px; margin-left: 71px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
+    <div
+        id="map"
+        style="width: 835px;
+        height: 500px; margin-left: 71px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
 
  <div class="card"> <%= render 'shared/hub_list_card' %> </div>
-
 
 </div>
 
