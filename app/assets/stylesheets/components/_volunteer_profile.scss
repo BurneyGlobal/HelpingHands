@@ -23,6 +23,7 @@
       text-align: center;
       position: relative;
       top: 10px;
+      color: black;
 
     }
 }
@@ -37,16 +38,21 @@
 }
 .volunteer-profile-avatar {
   border-radius: 50%;
+  height: 70px;
+  width: 70px;
   position: relative;
-  top:80px;
-  left: 90px;
+  top: 120px;
+  left: 115px;
   background-color: white;
+  border: 1px solid black;
+
 }
 .volunteer-profile-details {
   position: relative;
   top: 8px;
   font-size: 18px;
   color: gray;
+  background-color: white;
 
   i {
     color: #404040;
