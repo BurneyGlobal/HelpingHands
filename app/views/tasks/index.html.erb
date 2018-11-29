@@ -2,13 +2,19 @@
   <%= render 'shared/dashboard_display_number_hubs' %>
 </div>
 
-<div class="task-index-container">
-  <div class="task-index-map">
-    ...
-  </div>
+<div class="task-index-container" style="margin-bottom: 200px">
+
+    <div
+      id="map"
+      style="width: 542px;
+      height: 450px; margin-left: 71px; margin-top: 50px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+
   <div class="task-index-task-progress">
     <div class="lists-in-progress">
-      <div class="list-card-in-progress" style="margin-left: 95px;">
+      <div class="list-card-in-progress" style="margin-left: 0px; width: 250px;">
         <div class="list-in-progress-card-header">In progress</div>
         <ul>
           <% @in_progress_tasks.each do |in_progress_task| %>
@@ -29,7 +35,7 @@
   </div>
 <div class="task-index-task-done">
   <div class="lists">
-    <div class="list-card" style="margin-left: 95px;">
+    <div class="list-card" style="margin-left: 0px;">
       <div class="list-card-header">Done</div>
       <ul>
         <%  @done_tasks.each do |done_task| %>
