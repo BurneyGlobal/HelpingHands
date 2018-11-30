@@ -38,12 +38,13 @@ class TasksController < ApplicationController
         lng: @task.location.longitude,
         lat: @task.location.latitude,
         color: '#33ACEE'
-      }]
+      }
+    ]
   end
 
   def create
     @task = Task.new(new_task_params)
-    location = Location.find_or_create_by(name: params[:location])
+    location = Location.find_or_create_by(name: params[:task][:location])
     @task.location = location
     @task.event = @event
     # @task_volunteer = @task.user
