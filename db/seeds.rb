@@ -41,7 +41,7 @@ users << User.create!(email:"henri@gmail.com", password: "123456", profession: p
 users << User.create!(email:"peter@gmail.com", password: "123456", profession: professions[1], first_name: "Peter", last_name: "Smith", phone: "45 35 64 32 78")
 users << User.create!(email:"anna@gmail.com", password: "123456", profession: professions[2], first_name: "Anna", last_name: "Litfin", phone: "45 88 25 86 52")
 users << User.create!(email:"georg@gmail.com", password: "123456", profession: professions[3], first_name: "Georg", last_name: "Jonsen", phone: "45 35 64 32 78")
-users << User.create!(email:"janet@gmail.com", password: "123456", profession: professions[0], first_name: "Janet", last_name: "Peterson", phone: "45 54 24 32 43")
+users << User.create!(email:"vickie@gmail.com", password: "123456", profession: professions[0], first_name: "Vickie", last_name: "Laurent-Burney", phone: "45 54 24 32 43")
 users << User.create!(email:"mark@gmail.com", password: "123456", profession: professions[2], first_name: "Mark", last_name: "Smith", phone: "45 88 25 86 52")
 users << User.create!(email:"janina@gmail.com", password: "123456", profession: professions[1], first_name: "Janina", last_name: "Hansen", phone: "45 88 25 86 52")
 users << User.create!(email:"flaming@gmail.com", password: "123456", profession: professions[3], first_name: "Fleming", last_name: "Carter", phone: "45 35 64 32 78")
