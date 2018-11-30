@@ -1,11 +1,11 @@
 $appbar-height: 40px;
 $navbar-height: 50px;
-$list-width-in-progress: 300px;
-$list-hight:400px;
+$list-width-in-progress: 250px;
+$list-hight-in-progress:450px;
 $gap: 10px;
 $scrollbar-thickness: 17px;
-$list-header-height: 36px;
-$list-footer-height: 36px;
+$list-header-height: 45px;
+$list-footer-height: 45px;
 // Misc
 $list-border-radius: 5px;
 $card-border-radius: 3px;
@@ -14,9 +14,17 @@ $board-bg-color: #0079bf;
 $appbar-bg-color: #0067a3;
 $list-bg-color: #e2e4e6;
 
+
+
 .lists-in-progress {
   display: flex;
   overflow-x: auto;
+  margin-left: 44px;
+  margin-right: 0px;
+  margin-top: 50px;
+  height: $list-hight-in-progress;
+
+
   //width: 100%; // This is needed for FF < 54
   > * {
     flex: 0 0 auto; // 'rigid' lists
@@ -30,8 +38,9 @@ $list-bg-color: #e2e4e6;
 
 .list-card-in-progress {
   width: $list-width-in-progress;
-  height: $list-hight;
+  // height: 400px;
   line-height: 1.3em;
+  margin-left: 0px;
   > * {
     background-color: $list-bg-color;
     color: #333;
@@ -51,7 +60,6 @@ $list-bg-color: #e2e4e6;
   ul {
     list-style: none;
     margin: 0;
-
     max-height: calc(100% - #{$list-header-height} - #{$list-footer-height});
     overflow-y: auto;
 
@@ -60,8 +68,10 @@ $list-bg-color: #e2e4e6;
       cursor: pointer;
       background-color: #fff;
       padding: $gap;
+      display: flex;
+
       &:not(:last-child) {
-        margin-bottom: $gap;
+      margin-bottom: $gap;
       }
 
       border-radius: $card-border-radius;
@@ -79,7 +89,7 @@ $list-bg-color: #e2e4e6;
     line-height: $list-header-height;
     font-size: 22px;
     font-weight: bold;
-    padding: 15px 10px;
+    padding: 5px 5px;
     border-top-left-radius: $list-border-radius;
     border-top-right-radius: $list-border-radius;
   }
@@ -92,11 +102,12 @@ $list-bg-color: #e2e4e6;
   }
 }
 
-
-.add-task-button {
+.search-task-button {
   text-align: center;
   padding: 1px 0px;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 15px;
   i {
     transition: 0.2s ease;
     margin-right: 10px;
@@ -121,3 +132,19 @@ $list-bg-color: #e2e4e6;
   }
 }
 
+.done-task {
+  font-size: 25px;
+  padding-top: 10px;
+  color: $gray;
+  margin-right: 10px;
+  &:hover {
+    color: $blue;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &.active {
+  color: $blue;
+  opacity: 1;
+  }
+}
