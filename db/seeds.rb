@@ -32,14 +32,14 @@ task_volunteers = []
 professions << Profession.create!(name: "healthcare")
 professions << Profession.create!(name: "construction")
 professions << Profession.create!(name: "administration")
-professions << Profession.create!(name: "general_help")
+professions << Profession.create!(name: "general help")
 
 # Users
-users << User.create!(email:"anna@gmail.com", password: "123456", profession: professions[0], first_name: "Anna", last_name: "Litfin", phone: "12345678")
+users << User.create!(email:"anna@gmail.com", password: "123456", profession: professions[0], first_name: "Susan", last_name: "Hanson", phone: "12345678")
 users << User.create!(email:"jerrel@gmail.com", password: "123456", profession: professions[2], first_name: "Jerrel", last_name: "Burney", phone: "12345678")
 users << User.create!(email:"henri@gmail.com", password: "123456", profession: professions[1], first_name: "Henri", last_name: "Stenberg", phone: "12345678")
 users << User.create!(email:"peter@gmail.com", password: "123456", profession: professions[1], first_name: "Peter", last_name: "Smith", phone: "12345678")
-users << User.create!(email:"susan@gmail.com", password: "123456", profession: professions[3], first_name: "Susan", last_name: "Hanson", phone: "12345678")
+users << User.create!(email:"susan@gmail.com", password: "123456", profession: professions[2], first_name: "Anna", last_name: "Litfin", phone: "12345678")
 users << User.create!(email:"georg@gmail.com", password: "123456", profession: professions[3], first_name: "Georg", last_name: "Jonsen", phone: "12345678")
 users << User.create!(email:"janet@gmail.com", password: "123456", profession: professions[0], first_name: "Janet", last_name: "Peterson", phone: "12345678")
 users << User.create!(email:"mark@gmail.com", password: "123456", profession: professions[2], first_name: "Mark", last_name: "Smith", phone: "12345678")
@@ -104,9 +104,9 @@ urgencies << Urgency.create!(name: "high")
 
 # Tasks
 tasks << Task.create!(name: "Fix the bridge", description: "Traffic lights fallen down, go fix it",
-          urgency: urgencies[2], location: locations[1], event: events[0])
+          urgency: urgencies[2], location: locations[1], event: events[0]) #0
 tasks << Task.create!(name: "Help a cat in a tree", description: "Cat in a tree",
-          urgency: urgencies[0], location: locations[2], event: events[0])
+          urgency: urgencies[0], location: locations[2], event: events[0])#1
 tasks << Task.create!(name: "Fallen tree", description: "Remove trees from the street",
           urgency: urgencies[1], location: locations[3], event: events[0], status: "in progress")
 tasks << Task.create!(name: "Food Distribution", description: "Pick up food from the church food pantry and deliver to the emergency shelter",
@@ -114,13 +114,13 @@ tasks << Task.create!(name: "Food Distribution", description: "Pick up food from
 tasks << Task.create!(name: "Roof Repair at Elementary School", description: "The roof is leaking, should be fixed, because of heavy rain",
           urgency: urgencies[2], location: locations[5], event: events[0], status: "in progress")
 tasks << Task.create!(name: "Vehicle stuck in ditch", description: "Caution! 4-door sedan needs to be pulled out of ditch and towed. Driver expecting call to help get car on tow",
-          urgency: urgencies[0], location: locations[3], event: events[0])
+          urgency: urgencies[0], location: locations[3], event: events[0])#5
 tasks << Task.create!(name: "Ten people waiting to get a lift", description: "People looking for a transport to get to the emergency shelter",
           urgency: urgencies[1], location: locations[2], event: events[0], status: "done")
 tasks << Task.create!(name: "Water in a cellar", description: "Somebody would need help to pump water out of the cellar",
           urgency: urgencies[1], location: locations[4], event: events[0], status: "done")
 tasks << Task.create!(name: "Boat leaking", description: "Emergency service boat got hit and is leaking and would have to be transported to a service",
-          urgency: urgencies[2], location: locations[1], event: events[0], status: "in progress")
+          urgency: urgencies[2], location: locations[1], event: events[0], status: "done")
 tasks << Task.create!(name: "Mold Remediation", description: "Residential building, Spores of mold in cellar, needs porper remediation ",
           urgency: urgencies[2], location: locations[1], event: events[0], status: "in progress")
 tasks << Task.create!(name: "Clear Cellar", description: "Damaged furniture in the cellar needs to be cleared out. All items should go in blue dumpster.",
@@ -130,11 +130,11 @@ tasks << Task.create!(name: "Mold Remediation", description: "Spores of mold in 
 tasks << Task.create!(name: "Mold Remediation", description: "Spores of mold in cellar of single-detached home",
           urgency: urgencies[2], location: locations[1], event: events[0], status: "in progress")
 tasks << Task.create!(name: "Clear Debris", description: "Water damaged office furniture in basement office needs to be cleared out. All items should go into commercial dumpster.",
-          urgency: urgencies[2], location: locations[11], event: events[0], status: "in progress")
+          urgency: urgencies[2], location: locations[11], event: events[0], status: "done")
 tasks << Task.create!(name: "Fallen scaffolding", description: "A scaffold has collapsed and structural debris needs to be cleared.",
-          urgency: urgencies[2], location: locations[11], event: events[0], status: "in progress")
-tasks << Task.create!(name: "Photo Survey", description: "Survey the area. Drive around and take photos of debris or visible structural damage. Take note of the address and please be as descriptive as possble. Submit photos to your lead coordinator through the Helping Hands App.",
-          urgency: urgencies[2], location: locations[11], event: events[0], status: "in progress")
+          urgency: urgencies[2], location: locations[11], event: events[0])
+tasks << Task.create!(name: "Photo Survey", description: "Survey the area. Drive around and take photos of debris or visible structural damage.",
+          urgency: urgencies[2], location: locations[11], event: events[0])
 
 
 # Hubs
@@ -185,23 +185,23 @@ resource_assets << ResourceAsset.create!(name: "Surface Disinfectant", resourcea
 
 
 # Task volunteers
-task_volunteers << TaskVolunteer.create!(user: users[0], task: tasks[0])
-task_volunteers << TaskVolunteer.create!(user: users[1], task: tasks[1])
+task_volunteers << TaskVolunteer.create!(user: users[0], task: tasks[10])
+task_volunteers << TaskVolunteer.create!(user: users[1], task: tasks[4])
 task_volunteers << TaskVolunteer.create!(user: users[2], task: tasks[2])
 task_volunteers << TaskVolunteer.create!(user: users[3], task: tasks[2])
 task_volunteers << TaskVolunteer.create!(user: users[4], task: tasks[3])
 task_volunteers << TaskVolunteer.create!(user: users[5], task: tasks[4])
 task_volunteers << TaskVolunteer.create!(user: users[6], task: tasks[4])
-task_volunteers << TaskVolunteer.create!(user: users[6], task: tasks[0])
-task_volunteers << TaskVolunteer.create!(user: users[6], task: tasks[1])
+task_volunteers << TaskVolunteer.create!(user: users[6], task: tasks[4])
+task_volunteers << TaskVolunteer.create!(user: users[6], task: tasks[6])
 task_volunteers << TaskVolunteer.create!(user: users[3], task: tasks[3])
-task_volunteers << TaskVolunteer.create!(user: users[3], task: tasks[0])
-task_volunteers << TaskVolunteer.create!(user: users[2], task: tasks[1])
+task_volunteers << TaskVolunteer.create!(user: users[3], task: tasks[2])
+task_volunteers << TaskVolunteer.create!(user: users[2], task: tasks[8])
 task_volunteers << TaskVolunteer.create!(user: users[2], task: tasks[3])
 task_volunteers << TaskVolunteer.create!(user: users[4], task: tasks[2])
-task_volunteers << TaskVolunteer.create!(user: users[4], task: tasks[0])
-task_volunteers << TaskVolunteer.create!(user: users[5], task: tasks[1])
-task_volunteers << TaskVolunteer.create!(user: users[5], task: tasks[0])
+task_volunteers << TaskVolunteer.create!(user: users[4], task: tasks[2])
+task_volunteers << TaskVolunteer.create!(user: users[5], task: tasks[4])
+task_volunteers << TaskVolunteer.create!(user: users[5], task: tasks[7])
 
 
 puts "done"

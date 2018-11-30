@@ -9,7 +9,7 @@ class UserRole < ApplicationRecord
       return "fas fa-pencil-alt color-yellow"
     elsif user.profession.name == "construction"
       return "fas fa-wrench color-brown"
-    elsif user.profession.name == "general_help"
+    elsif user.profession.name == "general help"
       return "fas fa-dolly color-green"
     end
   end
